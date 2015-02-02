@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Visha's Experiments</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Web Development CS-5610 Home Page">
+<meta name="author" content="Vishalakshy Rajaram Chettiar">
+<link rel="stylesheet" href="StyleSheet.css" />
+
+</head>
+
+<body>
+	<div class="main-wrapper">
+
+		<h1>Experiment 3 - HTML5 - date,time &amp; week input types</h1>
+
+		<div class="exp-wrap">
+
+			<h2>date,time &amp; week input types</h2>
+			<div>
+				<table>
+					<tr>
+						<td><label for="date"> Date : </label></td>
+						<td><input type="date" name="date" min="2015-01-10"
+							max="2015-01-27"></td>
+					<tr>
+						<td><label for="time"> Time : </label></td>
+						<td><input type="time" name="time" min="05:00:00"
+						    max="11:00:00"></td>
+					</tr>
+					<tr>
+						<td><label for="week"> Week : </label></td>
+						<td><input type="week" name="week" step=2 min="2015-01-04"
+							max="2015-01-31"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<h2>About the experiment</h2>
+
+		<p id="text">
+			<b> date :</b> The date input type is used to specify date. The date
+			input type also provides a date picker and the way in which the date
+			picker looks depends on the browser that displays it. The format in
+			which the date is displayed depends on the location of the browser.
+			The min and max attributes are used to set the lower and upper bounds
+			for acceptable values. When min or max is specified with some value,
+			the date picker will only enable the dates that are within the given
+			range. <br /> <br /> 
+			
+			<b>Code Snippet:</b> <br /> <span> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input
+				type=&quot;date&quot; min=&quot;2015-01-10&quot;
+				max=&quot;2015-01-27&quot;&gt; </span> <br />
+				
+			<br /> <b> time :</b>The time input type is used to specify time.
+			Depending on browser support, a time picker can show up in the input
+			field.The min and max attributes are used to set the lower and upper
+			bounds for acceptable values. When min or max is specified with some
+			value, the time picker will only enable the time values that are within 
+			the	given range. <br /> <br />
+			
+			 <b>Code Snippet:</b> <br /> <span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;input type=&quot;date&quot; min=&quot;2015-01-10&quot;
+				max=&quot;2015-01-27&quot;&gt; </span> <br />
+				
+			<br /> <b> week :</b>The week input type is used to select a week and a year.
+			Depending on browser support, a date picker can show up in the input
+			field.The min and max attributes are used to set the lower and upper
+			bounds for acceptable values. When min or max is specified with some
+			value, the date picker will only enable the dates that are within the
+			given range. Step attribute specifies the legal number intervals for
+			an input field. If step is not specified it defaults to 1. <br /> <br />
+			
+			<b>Code Snippet:</b> <br /> <span> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input
+				type=&quot;week&quot; name=&quot;week&quot; step=2
+				min=&quot;2015-01-04&quot; max=&quot;2015-01-31&quot;&gt; </span>
+
+		</p>
+
+		<h2>Source Code</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/html5/Experiment3-date-time.html" target="_blank">View Source</a>
+
+		<h2>References</h2>
+			<a href="http://www.w3schools.com/" target="_blank">W3 Schools</a>
+
+	</div>
+
+</body>
+
+</html>

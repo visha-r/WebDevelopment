@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="stylesheet" href="ButtonAnimationStyle.css" />
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>CSS Experiment 5 - Animated buttons</h1>
+        <div class="demo-wrapper">
+            <h2>Animated buttons</h2>
+            <div class="header_text">
+                <header>
+                    Hover the mouse over the button to see the animation!!
+                </header>
+            </div>
+            <div>
+                <table id="buttonTable">
+                    <tr>
+                        <td><div class="buttons"><a href="#" class="round green">Experiment<span class="round">Ready to see all my experiments?</span></a></div></td>
+                        <td><div class="buttons"><a href="#" class="round red">Project<span class="round">Take a look at my project. You will really like it!!</span></a></div></td>
+                        <td><div class="buttons"><a href="#" class="round yellow">Documentation<span class="round">Complete details about the project</span></a></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        <p id="text">
+            This experiment creates animated buttons by rotating them through 360deg and displaying a different text when mouse hovers them.
+            The buttons are rotated creating an animation effect using transform property. The degree by which the button has to be
+            rotated must be mentioned in the transform property.
+            <br /><br />
+            <b>Code Snippet:</b>
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        @keyframes rotate { <br />
+                        0% { <br />
+                        transform: rotate(0deg); <br />
+                        } <br />
+                        <br />
+                        100% { <br />
+                        transform: rotate(-360deg); <br />
+                        } <br />
+                        } <br />
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+            The time taken to rotate the button is specified through transition property. Time is mentioned in seconds.
+            Different transition properties has been mentioned for different browsers as the syntax is different for various
+            browsers.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        .round {<br />
+                        display: block; <br />
+                        position: absolute; <br />
+                        text-shadow: 0 1px 0 rgba(255,255,255,.7); <br />
+                        -webkit-transition: all .25s ease-in-out; <br />
+                        -o-transition: all .25s ease-in-out; <br />
+                        -moz-transition: all .25s ease-in-out; <br />
+                        transition: all .25s ease-in-out; <br />
+                        box-shadow: 2px 2px 7px rgba(0,0,0,.2); <br />
+                        border-radius: 200px; <br />
+                        } <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </p>
+        <p>
+            <h2>Source Code</h2><br />
+            <a href="../../fileview/Default.aspx?~/experiments/css/Experiment5-buttonAnimation.html" target="_blank">View Source</a>
+        </p><br />
+        <p>
+            <h2>References</h2>
+            <div><a href="http://www.codepen.com/" target="_blank">Codepen</a></div>
+        </p>
+    </div>
+</body>
+</html>

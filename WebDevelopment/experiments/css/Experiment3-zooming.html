@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="StyleSheet.css" />
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>CSS Experiment 3 - Zooming & Rotation</h1>
+        <div class="demo-wrapper">
+            <h2>Zooming & Rotation</h2>
+            <div class="thumbnail">
+                <img class="expt" src="../../images/my_pics/experiment.jpg" alt=" experiment link" />
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        <p id="text">
+            Zooming can bring out some animation effect by enlarging the focused content. The image or the content which is going to be
+            enlarged must be given a size. So when the same image is enlarged, we can mention to what proportion of the original size
+            the image has to be enlarged.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        .expt{ <br />
+                        width:150px; <br />
+                        height:150px; <br />
+                        } <br /><br />
+
+                        .thumbnail:hover .expt { <br />
+                        transform: scale(1.5) rotate(100deg); <br />
+                        -webkit-transition-timing-function:ease; <br />
+                        }<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            The styling above says that, when mouse hovers over the image it has be enlarged 1.5 times more than its original size.
+            The image has also been rotated through transform property. The image will be rotated by the given angle bringing out the
+            rotation effect.
+
+            <br />
+        </p>
+
+        <h2>Source Code</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/css/Experiment3-zooming.html" target="_blank">View Source</a>
+        <h2>References</h2>
+        <div><a href="http://www.drujoopress.com/" target="_blank">Drujoopress</a></div>
+        <div><a href="http://www.stackoverflow.com/" target="_blank">Stackoverflow</a></div>
+    </div>
+</body>
+</html>

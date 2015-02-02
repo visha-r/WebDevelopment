@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Visha's Experiments</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Web Development CS-5610 Home Page">
+<meta name="author" content="Vishalakshy Rajaram Chettiar">
+<link rel="stylesheet" href="StyleSheet.css"/>
+
+<script type="text/javascript">
+
+		function dragStart(ev) {
+			ev.dataTransfer.effectAllowed='move';
+			ev.dataTransfer.setData("Text", ev.target.getAttribute('id')); 
+			return true;
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<div class="main-wrapper">
+
+		<h1>Experiment 1 - HTML5 - canvas &amp; SVG</h1>
+
+		<div class="exp-wrap">
+
+			<h2>Drag and drop</h2>
+			<div align="center">
+				<div>Try to drag the purple box and drop it into the pink one.</div>
+
+				<div id="boxA" draggable="true"
+					ondragstart="return dragStart(event)">
+					<p>Drag Me</p>
+				</div>
+				<br />
+				<div id="boxB" onDrop="drop(event)" ondragover="allowDrop(event)">Drop
+					here</div>
+			</div>
+		</div>
+
+		<h2>About the experiment</h2>
+
+		<p id="text">
+			Drop and drop concept lets the user to rearrange html elements by
+			means of dragging and dropping. First the element that has to be
+			moved must be selected, dragged over and dropped onto the
+			destination. Drag and drop functionality can be written using
+			javascript or jQuery. There are number of events like
+			dragover,dragleave, dragenter, drag and drop, which gets fired during
+			various stages of the drag and drop operation. <br /> <br /> To
+			make an object draggable, its draggable attribute must be set to true
+			and an event listener must be set for onDragStart event. <br /> <br />
+			<b>Code Snippet:</b> <br /> <br /> <span>
+
+				&nbsp;&nbsp;&lt;div id=&quot;boxA&quot; <b>draggable=&quot;true&quot;
+					ondragstart=&quot;return ondragstart(event)&quot; </b>> &lt;p&gt;Drag
+				Me&lt;/p&gt; &nbsp;&nbsp;&lt;/div&gt;
+			</span> <br /> <br /> To make an object accept the drop, event listener
+			must be set for its ondragover and ondrop events. <br /> <br /> <b>Code
+				Snippet:</b> <br /> <br /> <span> &nbsp;&nbsp;&lt;div
+				id=&amp;boxB&amp; <b>ondrop=&quot;drop(event)&quot;
+					ondragover=&quot;allowdrop(event)&quot;</b>>Drop here&lt;/div&gt;
+			</span> <br /> <br/>
+			
+			The event listener methods for all the drag and drop events
+			accept Event object which has a readonly attribute called
+			dataTransfer. The dataTransfer object holds data about the drag and
+			drop operation.
+			
+		</p>
+
+		<h2>Source Code</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/html5/Experiment5-drag-drop.html" target="_blank">View Source</a>
+        
+		<h2>References</h2>
+		<a href="http://www.w3schools.com/" target="_blank">W3 Schools</a> <br/>
+		<a href="http://www.tutorialspoint.com/" target="_blank">Tutorialspoint</a>
+
+	</div>
+
+</body>
+
+</html>

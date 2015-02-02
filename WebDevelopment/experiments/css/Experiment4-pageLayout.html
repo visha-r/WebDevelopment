@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="WebLayoutStyle.css" />
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>CSS Experiment 4 - Page Layout using semantics & CSS styling</h1>
+        <div class="demo-wrapper">
+            <h2>Webpage design</h2>
+            <div class="flip-container">
+                <iframe src="PageLayout.html"></iframe>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        <p id="text">
+        <p>
+            The number of visitors to a web page depends mostly on its layout design. Hence paying careful attention
+            on choosing the web page layout design is very important. This experiment is about one one of a good layout
+            designs. To start with a webpage design, the styling for header, navigation and footer elements have to be decided.
+        </p>
+        <p>
+            The following is the styling for header section. The header position must be made 'fixed' so it will not move even if
+            the main content moves. Height of the header has been given as only 20% of the entire page.
+        </p>
+            <b>Code Snippet:</b>
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        header { <br />
+                        height: 20%; <br />
+                        width: 100%; <br />
+                        text-align: center; <br />
+                        background-color: lightblue; <br />
+                        position: fixed; <br />
+                        padding: 0px 30px 0px 30px; <br />
+                        } <br />
+                    </td>
+                </tr>
+            </table>  
+        <p>
+            The following is the styling for navigation section. The navigation section  can be used to provide quick links
+            to contents other than the ones in the main menu. The navigation section must also be made 'fixed' so it will not
+            move if the main content moves.
+        </p>
+        <b>Code Snippet:</b>
+        <table class="code">
+            <tr>
+                <td width="100%">
+                    nav { <br />
+                    width:15%; <br />
+                    height:70%; <br />
+                    position:fixed; <br />
+                    background-color:lightgreen; <br />
+                    margin-top:11%; <br />
+                    padding:100px 0px 100px 30px; <br />
+                    float:right; <br />
+                    }<br />
+                </td>
+            </tr>
+        </table> 
+        <p>
+            The following is the styling for article section. The article element represents a component of a page 
+            that consists of a self-contained composition in a document. The position of article should not be made fixed
+            as it should be able to flow freely. It must also have padding on top and left so it will not overlap with
+            header and navigation links.
+        </p>
+        <b>Code Snippet:</b>
+        <table class="code">
+            <tr>
+                <td width="100%">
+                    article { <br />
+                    width:80%; <br />
+                    height: 100%; <br />
+                    background-color: lightcyan; <br />
+                    margin:auto; <br />
+                    padding: 140px 0px 0px 250px; <br />
+                    } <br />
+                </td>
+            </tr>
+        </table>   
+        <p>
+            Finally, the margin of body should be reset to 0 so the main contents when scrolled upwards will not be visible in the
+            header section.
+        </p>
+        <h2>Source Code</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/css/Experiment4-pageLayout.html" target="_blank">View Source</a>
+        <h2>References</h2>
+        <div><a href="http://www.w3schools.com/" target="_blank">W3 Schools</a></div>
+        <div><a href="http://www.youtube.com/" target="_blank">Youtube</a></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="StyleSheet.css" />
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>Bootstrap Experiment 1 - Basic bootstrap elements</h1>
+        <div class="demo-wrapper">
+            <h2>Bootstrap elements - Grid-style, Badge, form-group, glyphicon, progressbar</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <span class="glyphicon glyphicon-play"></span>
+                        <label>Folders</label>
+                        <span class="badge">4</span>
+                    </div>
+                    <div class="col-sm-10">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        <img class="diskimg" src="../../images/my_pics/folder_img.jpg" />
+                        <label>Documents</label>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <img class="diskimg" src="../../images/my_pics/folder_img.jpg" />
+                        <label>Downloads</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <img class="diskimg" src="../../images/my_pics/folder_img.jpg" />
+                        <label>Music</label>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-6">
+                        <img class="diskimg" src="../../images/my_pics/folder_img.jpg" />
+                        <label>Pictures</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <span class="glyphicon glyphicon-play"></span>
+                        <label>Devices and Drives</label>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="col-sm-9">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img class="img-responsive diskimg" src="../../images/my_pics/dvd_drive.jpg" />
+                        <label>DVD Drive(D:)</label>
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="diskimg" src="../../images/my_pics/local_disk.jpg" />
+                        <label>Local Disk (C:)</label>
+                        <div>
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:60%">
+                                Used space
+                            </div>
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
+                                Free Space
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        <p id="text">
+            Bootstrap is a collection of pre-defined styling elements which helps in styling website elements very easy. The above 
+            experiment has been styled using various bootstrap elements like badge,glyphicons,grid styling,form-groups,progress-bar and img-responsive.
+            <br />
+            Bootstrap class badge is used to indicate the numberical indicator of the number of items. In the above case, 4 & 2 indicate
+            the number of folders and disk drives.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        &lt;div class=&quot;col-sm-2&quot;&gt;<br />
+                        &lt;span class=&quot;glyphicon glyphicon-play&quot;&gt;&lt;/span&gt;<br />
+                        &lt;label&gt;Folders&lt;/label&gt;<br />
+                        &lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;<br />
+                        &lt;/div&gt;<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            Glyphicon is a small icon which can symbolize things information like print,arrows,search,download etc. In this case
+            the glyphicon 'play' is used to appear before the group header name.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        &lt;div class=&quot;col-sm-3&quot;&gt;<br />
+                        &lt;span class=&quot;glyphicon glyphicon-play&quot;&gt;&lt;/span&gt;<br />
+                        &lt;label&gt;Devices and Drives&lt;/label&gt;<br />
+                        &lt;span class=&quot;badge&quot;&gt;2&lt;/span&gt;<br />
+                        &lt;/div&gt;<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            A progress bar can be used to show a user how far along he/she is in a process. In this experiment
+            the progressbar has been used to show the status of the disk space.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        &lt;div&gt; <br />
+                        &lt;div class=&quot;progress-bar progress-bar-warning&quot; role=&quot;progressbar&quot; style=&quot;width:60%&quot;&gt;<br />
+                        Used space <br />
+                        &lt;/div&gt; <br />
+                        &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width:40%&quot;&gt; <br />
+                        Free Space <br />
+                        &lt;/div&gt; <br />
+                        &lt;/div&gt; <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            Grid system is used to align items based on 12 columns in the page. The colums are responsive and will get arranged automatically
+            when the page is resized. In the code below, the items are arranged in such a way that each of the three items occupy 4 colums
+            adding up to 12.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        &lt;div class=&quot;form-group row&quot;&gt; <br />
+                        &lt;div class=&quot;col-sm-4&quot;&gt; <br />
+                        &lt;img src=&quot;../../images/my_pics/folder_img.jpg&quot; /&gt; <br />
+                        &lt;label&gt;Music&lt;/label&gt; <br />
+                        &lt;/div&gt; <br />
+                        &lt;div class=&quot;col-sm-4&quot;&gt; <br />
+                        &lt;/div&gt; <br />
+                        &lt;div class=&quot;col-sm-4&quot;&gt; <br />
+                        &lt;img src=&quot;../../images/my_pics/folder_img.jpg&quot; /&gt; <br />
+                        &lt;label&gt;Pictures&lt;/label&gt; <br />
+                        &lt;/div&gt; <br />
+                        &lt;/div&gt; <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </p>
+
+        <h2>Source Code</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/bootstrap/Experiment1-bootstrapElements.html" target="_blank">View Source</a>
+        <h2>References</h2>
+        <div><a href="http://www.w3schools.com/" target="_blank">W3Schools</a></div>
+    </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+</body>
+</html>

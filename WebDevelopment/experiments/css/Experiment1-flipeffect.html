@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="StyleSheet.css" />
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>CSS Experiment 1 - Flipping animation</h1>
+        <div class="demo-wrapper">
+            <h2>Flipping animation</h2>
+            <div class="header_text">
+                <header>
+                    Hover the mouse over the image to see the flipping effect!!
+                </header>
+            </div>
+            <div class="flip-container" onmouseover="this.classList.toggle('hover');">                
+                <div class="flipper">                    
+                    <div class="front">
+                        <img src="images/background_img1.jpg" />
+                    </div>
+                    <div class="back">
+                        <img src="images/background_img.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        <p id="text">
+            Flipping effect helps to bring out some animation effect like by flipping contents like images on some event . The image above can be flipped by
+            hovering the mouse over it. The effect can also be triggered by different events like onclick, onfocus, onmouseleave etc.
+            The effect works by laying two images(front & back) one over the other at absolute position and only one is visible at a time while the other is hidden.
+            <br/><br />
+            <b>Code Snippet:</b>
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                            .front, .back {<br />
+                            backface-visibility: hidden;<br />
+                            position: absolute;<br />
+                            top:0px;<br />
+                            left:0px;<br />
+                            }
+                    </td>
+                </tr>
+            </table>
+            <br/><br />
+            The images are flipped in a 3-dimensional manner through transform-style property. Also the time it takes to flip between images
+            is controlled through transition property. In this example, the transition time is given as 1 second.
+            <br/>
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">                       
+                            .flipper {<br />
+                            transition: 1s;<br />
+                            transform-style: preserve-3d;<br />
+                            }                      
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+            Because there are two images laid one over the other, the decision to display which image on the top is done through transform property.
+            The following code snippet says the image at the back is rotated 180deg along Y so it will look hidden at the back of front image.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        .back {<br />
+                        transform: rotateY(180deg);<br />
+                        }
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+            Finally, this flipping effect must be triggered on some event. In this example it is done on mousehover event. When the mouse hovers on the image,
+            it is rotated through 180deg to show the other image.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        .flip-container:hover .flipper {<br />
+                        transform: rotateY(180deg);<br />
+                        }
+                    </td>
+                </tr>
+            </table>
+        </p>
+
+        <h2>Source Code</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/css/Experiment1-flipeffect.html" target="_blank">View Source</a>
+        <h2>References</h2>
+        <div><a href="http://www.w3schools.com/" target="_blank">W3 Schools</a></div>
+        <div><a href="http://www.davidwalsh.name" target="_blank">Davidwalsh</a></div>
+    </div>
+</body>
+</html>

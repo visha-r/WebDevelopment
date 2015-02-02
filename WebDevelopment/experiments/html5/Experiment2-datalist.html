@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <script src="../../javascript/geolocation.js"></script>
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <h1>Experiment 2 - HTML5 - datalist & Geolocation</h1>
+
+        <div class="exp-wrap">
+
+            <h2>&lt;datalist&gt; & Geolocation</h2>
+            <div>
+                <strong>Datalist: </strong>
+                <div align="center">
+                    <label for="schools"> School Name : </label>
+                    <input list="schools" placeholder="Enter School Name" size="40">
+                    <datalist id="schools">
+                        <option value="Allen University">
+                        <option value="Arizona State University">
+                        <option value="Boston University">
+                        <option value="Carnegie Mellon University">
+                        <option value="Northeastern University">
+                    </datalist>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div>
+                <strong>Geolocation:</strong>
+                <div align="center">
+                    <p id="demo">Please click the try button to see your location on the map</p>
+                    <button onclick="getLocation()">Know your location</button>
+                    <div id="mapholder"></div>
+                </div>
+            </div>
+        </div>
+
+        <h2>About the experiment</h2>
+
+        <p id="text">
+            The &lt;datalist&gt; tag specifies a list of pre-defined options for an  &lt;input &gt; element. It also provides
+            auto complete feature making it easier to enter the data. The &lt;datalist&gt; tag also lets the user to specify some
+            value other than the pre-defined ones. It should be used along with the &lt;input&gt; element to bind the values together.
+            The element above uses the attribute named 'placeholder' which gives the user some hint on the type of data to be entered.
+            'size' attribute is used to increase the length of the text area.         
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+
+            <br />
+            <br />
+            
+                <table class="code">
+                    <tr>
+                        <td width="100%">
+                            &lt;input list=&quot;schools&quot; placeholder=&quot;Enter School Name&quot;&gt; <br />
+                            &lt;datalist id=&quot;schools&quot;&gt; <br />
+                            &nbsp;&nbsp;&lt;option value=&quot;Allen University&quot;&gt; <br />
+                            &nbsp;&nbsp;&lt;option value=&quot;Arizona State University&quot;&gt; <br />
+                            &nbsp;&nbsp;&lt;option value=&quot;Boston University&quot;&gt;  <br />
+                            &nbsp;&nbsp;&lt;option value=&quot;Carnegie Mellon University&quot;&gt; <br />
+                            &nbsp;&nbsp;&lt;option value=&quot;Northeastern University&quot;&gt; <br />
+                            &lt;/datalist&gt;
+                            </td>
+                        </tr>
+                    </table>
+            <br />
+            The HTML Geolocation API is used to get the geographical position of a user. Since this can compromise user privacy, 
+            the position is not available unless the user approves it. The method showPosition takes in the current position of the
+            user and calculates the latitude & Longitude.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+                <table class="code">
+                    <tr>
+                        <td width="100%">
+                            function getLocation() { <br />
+                            if (navigator.geolocation) { <br />
+                            navigator.geolocation.getCurrentPosition(showPosition, showError); <br />
+                            } else { <br />
+                            x.innerHTML = "Geolocation is not supported by this browser."; <br />
+                            } <br />
+                            } <br />
+                          </td>
+                      </tr>
+                 </table>
+            <br />
+            <br />
+            Because finding the location is a privacy issue, the location will be tracked only upon getting
+            permission from the user. If the user denies to track his location or if the user location is not
+            available or if the request gets timed out error will be thrown with a message.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        function showError(error) { <br />
+                        switch(error.code) { <br />
+                        case error.PERMISSION_DENIED: <br />
+                        x.innerHTML = "User denied the request for Geolocation." <br />
+                        break; <br />
+                        case error.POSITION_UNAVAILABLE: <br />
+                        x.innerHTML = "Location information is unavailable." <br />
+                        break; <br />
+                        case error.TIMEOUT: <br />
+                        x.innerHTML = "The request to get user location timed out." <br />
+                        break; <br />
+                        case error.UNKNOWN_ERROR: <br />
+                        x.innerHTML = "An unknown error occurred." <br />
+                        break; <br />
+                        } <br />
+                    </td>
+                </tr>
+            </table>	
+            <br />
+            To display the result in a map, you need access to a map service that can use latitude and longitude, like Google Maps:		
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        function showPosition(position) { <br />
+                        var latlon = position.coords.latitude + "," + position.coords.longitude; <br />
+                        var img_url = "http://maps.googleapis.com/maps/api/staticmap?center=" <br />
+                        +latlon+"&zoom=14&size=400x300&sensor=false"; <br />
+                        } <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </p>
+        <br />
+        <h2>Source Code</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/html5/Experiment2-datalist.html" target="_blank">View Source</a>
+
+        <h2>References</h2>
+        <a href="http://www.w3schools.com/" target="_blank">W3 Schools</a>
+
+    </div>
+
+</body>
+
+</html>

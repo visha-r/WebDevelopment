@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="CarouselStyleSheet.css" />
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>Bootstrap Experiment 3 - Carousel & JS collapse </h1>
+        <div class="demo-wrapper">
+            <div class="container">
+                <br />
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="item active">
+                            <img src="../../images/my_pics/background_img.jpg" alt="Sample pics">
+                            <div class="carousel-caption">
+                                <h3>Windows</h3>
+                                <p>One of the popular background images of windows.</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../../images/my_pics/home_image.jpeg" alt="Sample pics">
+                            <div class="carousel-caption">
+                                <h3>Pleasant</h3>
+                                <p>A very pleasant and sutle background.</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../../images/my_pics/background_img2.jpg" alt="Sample pics">
+                            <div class="carousel-caption">
+                                <h3>Bright</h3>
+                                <p>A very bright and vibrant background.</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../../images/my_pics/background_img3.jpg" alt="Sample pics">
+                            <div class="carousel-caption">
+                                <h3>Dark</h3>
+                                <p>A dark modern wooden background.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <div class="container">
+                    <h3>Collapse</h3>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#html5">HTML5 Experiments</a>
+                                </h4>
+                            </div>
+                            <div id="html5" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><a href="../html5/Experiment1-iFrame.html" target="_blank">iFrame in HTML5</a></li>
+                                        <li><a href="../html5/Experiment2-datalist.html" target="_blank">Datalist & Geolocation</a></li>
+                                        <li><a href="../html5/Experiment3-date-time.html" target="_blank"> Date & Time picker</a></li>
+                                        <li><a href="../html5/Experiment4-audio-video.html" target="_blank"> Audio & Video</a></li>
+                                        <li><a href="../html5/Experiment5-drag-drop.html" target="_blank"> Drag and drop</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#css">CSS Experiments</a>
+                                </h4>
+                            </div>
+                            <div id="css" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><a href="../css/Experiment1-flipeffect.html" target="_blank"> Flipping animation</a></li>
+                                        <li><a href="../css/Experiment2-responsiveTable.html" target="_blank"> Responsive Table</a></li>
+                                        <li><a href="../css/Experiment3-zooming.html Zooming" target="_blank"> Zooming & Rotation animation</a></li>
+                                        <li><a href="../css/Experiment4-pageLayout.html" target="_blank"> Webpage layout design</a></li>
+                                        <li><a href="../css/Experiment5-buttonAnimation.html" target="_blank"> Button Animation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#bootstrap">Bootstrap Experiments</a>
+                                </h4>
+                            </div>
+                            <div id="bootstrap" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><a href="../bootstrap/Experiment1-bootstrapElements.html" target="_blank">Bootstrap Glyphicons,Progressbar,grid styling,badge & form-groups</a></li>
+                                        <li><a href="../bootstrap/Experiment2-table_with_pagination.html" target="_blank"> Bootstrap Pagination,table and menu </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        <p id="text">
+            <h3>Carousel :</h3>
+            Bottstrap has in-built support for carousel plugin, which helps to display images in a carousel manner
+            i.e like a slide show. Carousel requires an id for the whole container so functions can be applied to each
+            element in the container.
+            <br />
+            The class="carousel slide" specifies that this is going to display images in a slide show. The dots at the
+            bottom of each image is called indicator which indicates the position of the current image.
+            The class="left carousel-control" & class="right carousel-control" are used to control the slide show.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        &lt;a class=&quot;right carousel-control&quot; href=&quot;#myCarousel&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt; <br />
+                        &lt;span class=&quot;glyphicon glyphicon-chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; <br />
+                        &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt; <br />
+                        &lt;/a&gt; <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            To add caption to the pictures, the class "carousel-caption" has to be used.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        &lt;div class=&quot;carousel-caption&quot;&gt;<br />
+                        &lt;h3&gt;Dark&lt;/h3&gt;<br />
+                        &lt;p&gt;A dark modern wooden background.&lt;/p&gt;<br />
+                        &lt;/div&gt;<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <h3>JS Collapse :</h3>
+            JS collapse can be used to collapse and display the menu or navigation items. The support of
+            JS collapse is available through a bootstrap plugin. It also requires jQuery library to support
+            bootstrap collapse.
+            The links or items that have to collapsed must use the classes "panel-collapse" & "collapse".
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        &lt;div id=&quot;bootstrap&quot; class=&quot;panel-collapse collapse&quot;&gt; <br />
+                        &lt;div class=&quot;panel-body&quot;&gt; <br />
+                        &lt;ul&gt; <br />
+                        &lt;li&gt;&lt;a href=&quot;../bootstrap/Experiment1-bootstrapElements.html&quot; target=&quot;_blank&quot;&gt;Bootstrap Glyphicons,Progressbar,grid styling,badge &amp; form-groups&lt;/a&gt;&lt;/li&gt; <br />
+                        &lt;li&gt;&lt;a href=&quot;../bootstrap/Experiment2-table_with_pagination.html&quot; target=&quot;_blank&quot;&gt; Bootstrap Pagination,table and menu &lt;/a&gt;&lt;/li&gt; <br />
+                        &lt;/ul&gt; <br />
+                        &lt;/div&gt; <br />
+                        &lt;/div&gt; <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            The heading that should appear after collapsing uses the class "panel-heading" and the actual content uses
+            "panel-body".
+            <br />
+        </p>
+
+        <h2>Source Code</h2>
+        <a class="links" href="../../fileview/Default.aspx?~/experiments/bootstrap/Experiment3-carousel.html" target="_blank">View Source</a>
+        <h2>References</h2>
+        <div><a class="links" href="http://www.w3schools.com/" target="_blank">W3Schools</a></div>
+    </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+</body>
+</html>
