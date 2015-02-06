@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="StyleSheet.css" />
+  
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>jQuery Experiment - jQuery UI elements</h1>
+        <div class="demo-wrapper">
+            <h2>jQuery UI elements - datepicker, tabs, autocomplete, slider & dialog </h2>
+            <div id="msg"></div>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Tab-1</a></li>
+                    <li><a href="#tabs-2">Tab-2</a></li>
+                    <li><a href="#tabs-3">Tab-3</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <table id="formTable" class="table">
+                        <tr>
+                            <td>
+                                <label for="fname"> First Name :</label>
+                            </td>
+                            <td>
+                                <input type="text" id="fname" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fname"> Last Name :</label>
+                            </td>
+                            <td>
+                                <input type="text" id="lname" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="tags">Technology: </label>
+                            </td>
+                            <td>
+                                <input id="tags" placeholder="autocomplete enabled">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="datepicker">DOB : </label>
+                            </td>
+                            <td>
+                                <input type="text" id="datepicker" placeholder="select date thro' picker">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="slider">Slide to rate yourself : </label>
+                            </td>
+                            <td>
+                                <div id="slider"> </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <div id="btncontainer">
+                        <button id="btn" class="btn btn-primary">Click me to see the dynamic text!!!</button>
+                    </div>
+                </div>
+                <div id="tabs-2">
+                    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                </div>
+                <div id="tabs-3">
+                    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+                </div>
+            </div>
+
+            <div id="dialog" title="Basic dialog">
+                <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+            </div>
+        </div>
+
+        <h2>About the experiment</h2>
+        <p id="text">
+            This experiment portraits jQuery UI elements like datepicker, tabs, autocomplete, slider & dialog.
+            <br />
+            <b> datepicker : </b>
+            The datepicker as the name implies, can be used to pick a particular date. The date picker can be given different skins
+            depending on the users choice.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        $(&quot;#datepicker&quot;).datepicker(); <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <b> tabs : </b> 
+            Tabs are sets of logically grouped content that allow us to quickly flip between them to. Tabs allow us to save space 
+            like accordions.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        $(&quot;#tabs&quot;).tabs();<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <b> autocomplete : </b>
+            Autocompletion is a mechanism frequently used in modern websites to provide the user with a list of 
+            suggestions for the beginning of the word he has typed in a text box. jQuery has built-in option for
+            autocomplete feature.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        var availableTags = [ <br />
+                        &quot;ActionScript&quot;,<br />
+                        &quot;AppleScript&quot;, <br />
+                        &quot;Asp&quot;, <br />
+                        &quot;BASIC&quot;, <br />
+                        ]; <br />
+                        $(&quot;#tags&quot;).autocomplete({ <br />
+                        source: availableTags <br />
+                        }); <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <b> dialog: </b>
+            Dialog is an useful of presenting information to the user. jQuery uses 'dialog' property to make an element
+            as a dialog box.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        $(&quot;#dialog&quot;).dialog({ <br />
+                        autoOpen: true, <br />
+                        buttons: { <br />
+                        OK: function () { $(this).dialog(&quot;close&quot;); } <br />
+                        }, <br />
+                        title: &quot;Success&quot; <br />
+                        }); <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <b> slider: </b>
+            A slider is used whenever a numeric value within a certain range is to be obtained. jQuery's 'slider'
+            property is used to give sliding feature to an html element.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        $(&quot;#slider&quot;).slider({ <br />
+                        value: 60, <br />
+                        animate: &quot;slow&quot;, <br />
+                        orientation: &quot;horizontal&quot; <br />
+                        }); <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </p>
+
+        <h2>Source Code</h2>
+        <div><a href="../../fileview/Default.aspx?~/experiments/jQuery/Experiment2-jqueryForm.html" target="_blank">View HTML Source</a></div>
+        <div>
+            <a href="../../fileview/Default.aspx?~/experiments/jQuery/jquery.js" target="_blank">View jQuery Source</a>
+        </div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/jQuery/StyleSheet.css" target="_blank">View CSS Source</a> </div>
+        <h2>References</h2>
+        <div><a href="http://www.w3schools.com/" target="_blank">W3Schools</a></div>
+        <div><a href="http://www.jqueryui.com/" target="_blank">jQuery UI</a></div>
+        <div><a href="http://www.tutorialspoint.com/" target="_blank">TutorialsPoint</a></div>
+    </div>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="jquery.js"></script>
+</body>
+</html>

@@ -37,3 +37,53 @@
         $("#myBox").fadeTo("slow", 1);
     });
 });
+
+$(function () {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $("#tags").autocomplete({
+        source: availableTags
+    });
+
+    $("#slider").slider({
+        value: 40,
+        animate: "slow",
+        orientation: "horizontal"
+    });
+
+    $("#datepicker").datepicker();
+    $("#dialog").dialog({
+        autoOpen: true,
+        buttons: {
+            OK: function () { $(this).dialog("close"); }
+        },
+        title: "Success"       
+    });
+
+    $("#tabs").tabs();
+    $("#btn").click(function () {
+        $("#msg").addClass("msg").html("<b>You have successfully completed the form</b>");
+    });
+});
