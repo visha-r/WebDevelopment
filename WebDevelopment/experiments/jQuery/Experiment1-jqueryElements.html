@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web Development CS-5610 Home Page">
+    <meta name="author" content="Vishalakshy Rajaram Chettiar">
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>jQuery Experiment - Basic jQuery elements</h1>
+        <div class="demo-wrapper">
+            <h2>jQuery elements - hide, show, fade, animate, css</h2>
+            <div id="container">
+                <div id="myBox">
+                </div>
+                <div class="buttonContainer">
+                    <span class="buttonGroup">
+                        <button id="red" class="btn btn-primary">Paint red</button>
+                        <button id="blue" class="btn btn-primary">Paint blue</button>
+                        <button id="fade" class="btn btn-primary">Fade color</button>
+                        <button id="brighten" class="btn btn-primary">Brighten color</button>
+                        <br />
+                        <br />
+                        <button id="clear" class="btn btn-primary">clear</button>
+                        <button id="hide" class="btn btn-primary">Hide area</button>
+                        <button id="animate" class="btn btn-primary">Move right</button>
+                        <button id="animateCenter" class="btn btn-primary">Move to Center</button>
+
+                    </span>
+                    <button id="show" class="btn btn-primary">Show area</button>
+                </div>
+            </div>
+        </div>
+
+        <h2>About the experiment</h2>
+        <p id="text">
+            jQuery is a feature-rich javascript library that helps to make HTML element manipulation, traversal and event-handling
+            very easy. This experiment portraits basic jQuery events like css,fade, animate, hide & show.
+            <br />
+            <b> CSS() : </b>
+            The .css() method is a convenient way to get a style HTML elements on the fly. The css method accessed using jQuery
+            can access all properties of normal CSS.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        $(&quot;#blue&quot;).click(function () { <br />
+                        $(&quot;#myBox&quot;).css(&quot;background-color&quot;, &quot;blue&quot;); <br />
+                        });<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            The code above uses only one CSS property. If multiple CSS properties are to be set, it can be done as follows:
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        $(&quot;#blue&quot;).click(function () { <br />
+                        $(&quot;#myBox&quot;).css({&quot;background-color&quot;:&quot;blue&quot;, <br />
+                        &quot;text-align&quot;:&quot;center&quot;, <br />
+                        &quot;font-size&quot;:10px});<br />
+                        });<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <b> fadeTo() : </b>
+            The fadeTo( ) method fades the opacity of all matched elements to a specified opacity and firing an optional
+            callback after completion. Giving opacity less than 1 will fade the item. If the faded item has to be brightened up then the opacity
+            should be made 1. This experiment uses opacity of 0.15 for fading and 1 for brightening.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        <b> <h4>Fading :</h4></b>
+                        $(&quot;#fade&quot;).click(function () { <br />
+                        $(&quot;#myBox&quot;).fadeTo(&quot;slow&quot;, 0.15); <br />
+                        });<br />
+                        <b><h4> Brightening :</h4></b>
+                        $(&quot;#fade&quot;).click(function () { <br />
+                        $(&quot;#myBox&quot;).fadeTo(&quot;slow&quot;, 1); <br />
+                        });<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <b> hide() & show(): </b>
+            jQuery hide() and show() methods are used to hide and show the element respectively. If a single button has to be
+            used for both hide and show, then toggle() has to be used.
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        <h4> hide() : </h4>
+                        $(&quot;#hide&quot;).click(function () { <br />
+                        $(&quot;#myBox&quot;).hide(); <br />
+                        $(&quot;.buttonGroup&quot;).hide(); <br />
+                        }); <br />
+                        <b><h4> Show() :</h4> </b>
+                        $(&quot;#show&quot;).click(function () { <br />
+                        $(&quot;#myBox&quot;).show(); <br />
+                        $(&quot;.buttonGroup&quot;).show(); <br />
+                        });<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </p>
+
+        <h2>Source Code</h2>
+        <div><a href="../../fileview/Default.aspx?~/experiments/jQuery/Experiment1-jqueryElements.html" target="_blank">View HTML Source</a></div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/jQuery/jquery.js" target="_blank">View jQuery Source</a>
+        </div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/jQuery/StyleSheet.css" target="_blank">View CSS Source</a> </div>
+        <h2>References</h2>
+        <div><a href="http://www.w3schools.com/" target="_blank">W3Schools</a></div>
+        <div><a href="http://www.api.jquery.com/" target="_blank">jQuery</a></div>
+        <div><a href="http://www.tutorialspoint.com/" target="_blank">TutorialsPoint</a></div>
+    </div>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+</body>
+</html>

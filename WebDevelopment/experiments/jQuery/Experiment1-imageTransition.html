@@ -1,50 +1,39 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>
+        jQuery experiment
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
-        function swapImages(){
-            var $active = $('#myGallery .active');
-            var $next = ($('#myGallery .active').next().length > 0) ? $('#myGallery .active').next() : $('#myGallery img:first');
-            $next.css('z-index', 2);
-            $active.fadeOut(1500, function () {
-                $active.removeClass('active');
-                $next.fadeIn().css('z-index', 3).addClass('active');
-            });
-        }
-
-        $(document).ready(function () {
-            // Run our swapImages() function every 5secs
-            setInterval('swapImages()', 8000);
-        });
+        
     </script>
-    <style>
-        #myGallery {
-            position: relative;
-            width: 400px; /* Set your image width */
-            height: 300px; /* Set your image height */
-        }
-
-            #myGallery img {
-                display: none;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height:400px;
-                width:400px;
-
-            }
-
-                #myGallery img.active {
-                    display: block;
-                }
-    </style>
 </head>
 <body>
-    <div id="myGallery">
-        <img src="../../images/my_pics/background_img1.jpg" class="active" />
-        <img src="../../images/my_pics/background_img2.jpg" />
-        <img src="../../images/my_pics/background_img3.jpg" />
-    </div>
+    <div id="container">
+            <div id="myBox">
+            </div>
+            <div class="buttonContainer">
+                <span class="buttonGroup">
+                    <button id="red" class="btn btn-primary">Paint red</button>
+                    <button id="blue" class="btn btn-primary">Paint blue</button>
+                    <button id="fade" class="btn btn-primary">Fade color</button>
+                    <button id="brighten" class="btn btn-primary">Brighten color</button>
+                    <button id="clear" class="btn btn-primary">clear</button>
+                    <button id="hide" class="btn btn-primary">Hide area</button>
+                    <button id="animate" class="btn btn-primary">Move right</button>
+                    <button id="animateCenter" class="btn btn-primary">Move to Center</button>
+
+                </span>
+                <button id="show" class="btn btn-primary">Show area</button>
+            </div>
+        </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+    
 </body>
 </html>
