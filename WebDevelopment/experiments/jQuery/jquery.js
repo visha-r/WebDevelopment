@@ -73,6 +73,8 @@ $(function () {
         orientation: "horizontal"
     });
 
+    $("#resizeme").resizable();
+
     $("#datepicker").datepicker();
     $("#dialog").dialog({
         autoOpen: true,

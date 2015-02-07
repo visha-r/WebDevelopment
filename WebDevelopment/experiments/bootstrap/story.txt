@@ -1,2 +1,5 @@
 ﻿Experiment1-bootstrapElements.html Bootstrap Glyphicons,Progressbar,grid styling,badge & form-groups
 Experiment2-table_with_pagination.html Bootstrap Pagination,table and menu
+Experiment3-carousel.html Bootstrap Carousel & JS collapse
+../jQuery/Experiment1-jqueryElements.html jQuery hide, show, fade, animate, css
+../jQuery/Experiment2-jqueryForm.html jQuery datepicker, tabs, autocomplete, slider & dialog
