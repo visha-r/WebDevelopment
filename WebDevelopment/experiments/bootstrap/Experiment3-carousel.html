@@ -13,10 +13,68 @@
 </head>
 <body>
     <div class="main-wrapper">
-        <h1>Bootstrap Experiment 3 - Carousel & JS collapse </h1>
+        <h2>Bootstrap Experiment 3 - Carousel & JS collapse </h2>
         <div class="demo-wrapper">
+            <div>
+                <div class="container">
+                    <h3>JS Collapse</h3>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#html5">HTML5 Experiments</a>
+                                </h4>
+                            </div>
+                            <div id="html5" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><a href="../html5/Experiment1-iFrame.html" target="_blank">iFrame in HTML5</a></li>
+                                        <li><a href="../html5/Experiment2-datalist.html" target="_blank">Datalist & Geolocation</a></li>
+                                        <li><a href="../html5/Experiment3-date-time.html" target="_blank"> Date & Time picker</a></li>
+                                        <li><a href="../html5/Experiment4-audio-video.html" target="_blank"> Audio & Video</a></li>
+                                        <li><a href="../html5/Experiment5-drag-drop.html" target="_blank"> Drag and drop</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#css">CSS Experiments</a>
+                                </h4>
+                            </div>
+                            <div id="css" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><a href="../css/Experiment1-flipeffect.html" target="_blank"> Flipping animation</a></li>
+                                        <li><a href="../css/Experiment2-responsiveTable.html" target="_blank"> Responsive Table</a></li>
+                                        <li><a href="../css/Experiment3-zooming.html Zooming" target="_blank"> Zooming & Rotation animation</a></li>
+                                        <li><a href="../css/Experiment4-pageLayout.html" target="_blank"> Webpage layout design</a></li>
+                                        <li><a href="../css/Experiment5-buttonAnimation.html" target="_blank"> Button Animation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#bootstrap">Bootstrap Experiments</a>
+                                </h4>
+                            </div>
+                            <div id="bootstrap" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><a href="../bootstrap/Experiment1-bootstrapElements.html" target="_blank">Bootstrap Glyphicons,Progressbar,grid styling,badge & form-groups</a></li>
+                                        <li><a href="../bootstrap/Experiment2-table_with_pagination.html" target="_blank"> Bootstrap Pagination,table and menu </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container">
-                <br />
+                <h3>Carousel</h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -72,65 +130,6 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
-            </div>
-
-            <div>
-                <div class="container">
-                    <h3>Collapse</h3>
-                    <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#html5">HTML5 Experiments</a>
-                                </h4>
-                            </div>
-                            <div id="html5" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="../html5/Experiment1-iFrame.html" target="_blank">iFrame in HTML5</a></li>
-                                        <li><a href="../html5/Experiment2-datalist.html" target="_blank">Datalist & Geolocation</a></li>
-                                        <li><a href="../html5/Experiment3-date-time.html" target="_blank"> Date & Time picker</a></li>
-                                        <li><a href="../html5/Experiment4-audio-video.html" target="_blank"> Audio & Video</a></li>
-                                        <li><a href="../html5/Experiment5-drag-drop.html" target="_blank"> Drag and drop</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#css">CSS Experiments</a>
-                                </h4>
-                            </div>
-                            <div id="css" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="../css/Experiment1-flipeffect.html" target="_blank"> Flipping animation</a></li>
-                                        <li><a href="../css/Experiment2-responsiveTable.html" target="_blank"> Responsive Table</a></li>
-                                        <li><a href="../css/Experiment3-zooming.html Zooming" target="_blank"> Zooming & Rotation animation</a></li>
-                                        <li><a href="../css/Experiment4-pageLayout.html" target="_blank"> Webpage layout design</a></li>
-                                        <li><a href="../css/Experiment5-buttonAnimation.html" target="_blank"> Button Animation</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#bootstrap">Bootstrap Experiments</a>
-                                </h4>
-                            </div>
-                            <div id="bootstrap" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="../bootstrap/Experiment1-bootstrapElements.html" target="_blank">Bootstrap Glyphicons,Progressbar,grid styling,badge & form-groups</a></li>
-                                        <li><a href="../bootstrap/Experiment2-table_with_pagination.html" target="_blank"> Bootstrap Pagination,table and menu </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

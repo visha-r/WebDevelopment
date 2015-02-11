@@ -1,5 +1,6 @@
-﻿Experiment1-flipeffect.html Flipping animation
-Experiment2-responsiveTable.html Responsive Table
-Experiment3-zooming.html Zooming & Rotation animation
-Experiment4-pageLayout.html Webpage layout design
-Experiment5-buttonAnimation.html Button Animation
+﻿../../story/whatisnext.htm?../experiments/css/story.txt			    What is Next?
+Experiment1-flipeffect.html												Flipping animation
+Experiment2-responsiveTable.html										Responsive Table
+Experiment3-zooming.html												Zooming & Rotation animation
+Experiment4-pageLayout.html												Webpage layout design
+Experiment5-buttonAnimation.html										Button Animation

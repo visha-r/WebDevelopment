@@ -1,4 +1,5 @@
-﻿Experiment1-bootstrapElements.html Bootstrap Glyphicons,Progressbar,grid styling,badge & form-groups
+﻿../../story/whatisnext.htm?../experiments/bootstrap/story.txt			   What is Next?
+Experiment1-bootstrapElements.html Bootstrap Glyphicons,Progressbar,grid styling,badge & form-groups
 Experiment2-table_with_pagination.html Bootstrap Pagination,table and menu
 Experiment3-carousel.html Bootstrap Carousel & JS collapse
 ../jQuery/Experiment1-jqueryElements.html jQuery hide, show, fade, animate, css
