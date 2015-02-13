@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title> Movie search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"> </script>
+    <script type="text/javascript"
+            src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <style>
+        .response {
+            width: 600px;
+            height: 200px;
+        }  
+
+        .float {
+            float: left;
+        }
+
+        .instance {
+            border-bottom: 1px solid black;
+        }
+
+            .instance:nth-child(odd) {
+                background-color: lightgray;
+            }
+
+            .instance:nth-child(even) {
+                background-color: beige;
+            }
+        .search{
+            padding-left:40%;
+        }
+
+        .image {
+            width: 125px;
+            height: 150px;
+            align-self:center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="jumbotron">
+        <div class="search">
+            <label for="title">Movie title : </label>
+            <input type="text" name="title" placeholder="Enter the movie title" />
+            <span><button class="btn btn-primary go"> Search </button> </span>
+        </div>
+        <br />
+            <div class="row movieholder">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-8">
+                    <table class="result-set table table-striped table-hover table-bordered table-responsive">
+                        <tr class="instance">
+                            <td width="60%">
+                                <div style="float:left;width:400px">
+                                    <h3 class="title"></h3>
+                                    Rated : <span class="rating"></span><br />
+                                    Year :<span class="year"></span><br />
+                                    Audience Score : <span class="audienceScore"></span>/100<br />
+                                    Critics Score : <span class="criticsScore"></span>/100<br />
+                                </div>
+                            </td>
+                            <td width="40%">
+                                <div class="poster" style="float:left"><img class="image" /></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+</div>
+                <script>
+
+                    $(window).load(function () {
+                        $(".movieholder").hide();
+                    });
+
+                    $(".go").click(fetchData);
+
+                    function fetchData(event) {
+                        event.preventDefault();
+                        var apikey = "325pdck85e9sd5fsfpy4d7j5";
+                        var baseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
+                        var moviesSearchUrl = baseUrl + '/movies.json?format=jsonp&show=all&apikey=' + apikey;
+                        var title = $("input[name=title]").val();
+                        var year = $("input[name=year]").val();
+                        var parameters = {
+                            "title": $("input[name=title]").val()
+                        }
+                        alert(moviesSearchUrl);
+                        $.ajax({
+                            "url": moviesSearchUrl + "&q=" + title,
+                            "dataType": "jsonp",
+                            "success": function (response) {
+                                $(".response").val(response);
+                                renderUi(response.movies);
+                            }
+                        })
+                    }
+
+                    function renderUi(json) {
+                        console.log(json);
+                        var resultSet = $(".result-set");
+                        var instanceTemplate = $(".result-set .instance:first").clone();
+                        resultSet.empty();
+                        for (var i = 0; i < json.length; i++) {
+                            var instance = json[i];
+                            alert(instance.title);
+                            var instanceDom = instanceTemplate.clone();
+                            instanceDom.find(".title").html(instance.title);
+                            instanceDom.find(".year").html(instance.year);
+                            instanceDom.find(".audienceScore").html(instance.ratings.audience_score);
+                            instanceDom.find(".criticsScore").html(instance.ratings.critics_score);
+                            instanceDom.find(".rating").html(instance.mpaa_rating);
+                            instanceDom.find(".year").html(instance.year);
+                            instanceDom.find(".poster .image").attr("src", instance.posters.detailed);
+                            resultSet.append(instanceDom);
+                        }
+                        $(".movieholder").show();
+                    }
+                </script>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"> </script>
+</body>
+</html>
