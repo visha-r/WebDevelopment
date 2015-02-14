@@ -1,9 +1,10 @@
-﻿$(window).load(function () {
-    $(".prdtTable").hide();
-});
-
+﻿
 angular.module('ionicApp', [])
 .controller('MainCtrl', function ($scope, $http) {
+
+    $(window).load(function () {
+        $(".prdtTable").hide();
+    });
 
     // method to load music products
     $scope.music = function () {
