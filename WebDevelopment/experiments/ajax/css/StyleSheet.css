@@ -107,11 +107,17 @@ h2 {
 }
 
 .future{
-    width:500px;
-    height:500px;
-    padding-left:200px;
-    text-justify:auto;
-    font-size:22px;
+    width:95%;
+    height:30%;
+    margin-top:2%;
+    padding-left:5%;
+    text-align:justify;
+    font-size:18px;
     color:violet;
     font-style:italic;
+}
+
+.form-horizontal{
+    padding-left:3%;
+    padding-right:25%;
 }
