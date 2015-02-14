@@ -13,30 +13,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/StyleSheet.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="js/angular2.js"></script>
+    <script src="js/angular1.js"></script>
+
 </head>
 <body ng-app="ionicApp" ng-controller="MainCtrl">
     <div class="main-wrapper">
-        <h1>AngularJS Experiment 3 - Auto search </h1>
+        <h1>AngularJS Experiment 2 - Product search </h1>
         <div class="demo-wrapper">
-            <h2>Auto search using AngularJS binding property</h2>
+            <h2>Product search</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-2">
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="search-wrapper">
-                            <label for="title">Manufacturer Name : </label>
-                            <form>
-                                <input type="text" class="title search-box" name="focus" size="65" ng-model="title" placeholder="Enter any manufacturer name like Apple, Samsung, Nokia etc.. and wait for few seconds.." />
-                                <button class="close-icon" type="reset"></button>
-                            </form>
-                        </div>
+                    <div class="col-sm-10">
+                        <script type="text/javascript" src="js/include.js"> </script>
                     </div>
                     <div class="col-sm-2">
+                        
                     </div>
                 </div>
-                <div class="tablediv row">
+                <div class="tablediv row" >
                     <div class="col-sm-2">
                     </div>
                     <div class="col-sm-8">
@@ -76,10 +70,9 @@
         </div>
         <h2>About the experiment</h2>
         <p id="text">
-            This experiment uses angularJS binding property to fetch data automatically from a remote server using public web api of best buy. Because
-            the property of textbox is linked to angularJS model element, whatever changes we make in the UI (textbox) also reflects in the model. The model
-            property of search box is linked to the search url as query parameter. Hence api call is issued on every keyevent made on the search box, thereby
-            dynamically updating the query parameter.
+            This experiment uses angularJS to fetch records from a remote server using public web api of best buy. The $http service is a 
+            core Angular service that facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object or via JSONP.
+            On clicking links in the nav menu at the top, the appropriate http request is triggered. 
             <br />
             <br />
             <b>Code Snippet:</b>
@@ -88,14 +81,10 @@
             <table class="code">
                 <tr>
                     <td width="100%">
-                        $scope.fetchProducts = function () { <br />
-                        var itemType = $scope.title; <br />
-                        $http.jsonp(&apos;http://api.remix.bestbuy.com/v1/products(manufacturer=&apos; + itemType + <br />
-                        &apos;)?format=json&amp;show=all&amp;callback=JSON_CALLBACK&amp;apiKey=wu48f36djjruzarbeahrx8ay&apos;)<br />
+                        $scope.music = function () { <br />
+                        $http.jsonp(&apos;http://api.remix.bestbuy.com/v1/products(type=Music)?format=json&amp;show=all&amp;callback=JSON_CALLBACK&quot;)<br />
                         .success(function (resp) {<br />
                         $scope.products = resp.products;<br />
-                        console.log(resp.products);<br />
-                        $(&quot;.prdtTable&quot;).show();<br />
                         })<br />
                         .error(function (data) {<br />
                         $scope.data = &quot;Request failed&quot;;<br />
@@ -103,15 +92,39 @@
                     </td>
                 </tr>
             </table>
-            <br />
-            This type of search will help users by showing the results even before the user could finish typing thereby
-            saving their time and also showing suggestions. 
+            <br/>
+            <p>
+            Here, reponse is requested in JSONP format to avoid cross domain query issues. The http request returns a single or an array of
+            json objects depending on the query. The response is then iterated over using 'ng-repeat' to fetch the objects one by one. For
+            each object, the individual fields are extracted and displayed in html using '{ }'(angular expression) property.
             </p>
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        &lt;tr ng-repeat=&quot;product in products&quot;&gt; <br />
+                        &lt;td&gt;&lt;img ng-src=&quot;{{product.image}}&quot;&gt;&lt;/td&gt; <br />
+                        &lt;td&gt;&lt;h4&gt;&lt;b&gt;{{product.name}}&lt;/b&gt;&lt;/h4&gt;<br />
+                        &lt;p&gt;&lt;b&gt;Product Id: &lt;/b&gt;{{product.sku}}&lt;/p&gt;<br />
+                        &lt;p&gt;&lt;b&gt;Short Description:&lt;/b&gt; {{product.shortDescription}}&lt;/p&gt;<br />
+                        &lt;p&gt;&lt;b&gt;Long description : &lt;/b&gt;{{product.longDescription}}&lt;/p&gt;<br />
+                        &lt;/td&gt;<br />
+                        &lt;td width=&quot;40%&quot;&gt; &lt;p&gt;&lt;b&gt;Regular price : &lt;/b&gt;${{product.regularPrice}} &lt;/p&gt;<br />
+                        &lt;p&gt;&lt;b&gt;Sale Price : &lt;/b&gt;${{product.salePrice}}&lt;/p&gt;<br />
+                        &lt;/td&gt;<br />
+                        &lt;/tr&gt;<br />
+                    </td>
+                </tr>
+            </table>
+
         <h2>Source Code</h2>
-        <div><a href="../../fileview/Default.aspx?~/experiments/angular/Experiment2-autoSearch.html" target="_blank">HTML Source</a></div>
-        <div><a href="../../fileview/Default.aspx?~/experiments/angular/js/angular2.js" target="_blank">AngularJS Source</a></div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/Experiment1-ProductListing.html" target="_blank">HTML Source</a></div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/js/angular1.js" target="_blank">AngularJS Source</a></div>
         <h2>References</h2>
-        <div><a href="www.codepen.io" target="_blank">Codepen</a></div>
+        <div><a href="https://developer.bestbuy.com/" target="_blank">Bestbuy developer</a></div>
     </div>
 </body>
 </html>
