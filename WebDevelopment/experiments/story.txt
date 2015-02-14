@@ -2,3 +2,4 @@
 ../story/index.htm?../experiments/html5/story.txt					Week 01 - HTML5 Experiments
 ../story/index.htm?../experiments/css/story.txt						Week 02 - CSS & Resonsive design Experiments
 ../story/index.htm?../experiments/bootstrap/story.txt				Week 03 - Bootstrap & jQuery Experiments
+../story/index.htm?../experiments/angular/story.txt					Week 04 - AJAX & AngularJS

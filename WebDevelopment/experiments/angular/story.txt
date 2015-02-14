@@ -1,0 +1,6 @@
+﻿../../story/whatisnext.htm?../experiments/angular/story.txt			   What is Next?
+../ajax/Experiment2-movieSearchEngine.html Movie search engine
+Experiment1-ProductListing.html		AngularJS ajax request fetching data from a remote server
+Experiment2-autoSearch.html			Autosearch using angularJS data binding property
+Experiment3-pagination.html			AngularJS Pagination
+Experiment4-ProductReviews.html		Adding dynamic contents
