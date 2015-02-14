@@ -140,3 +140,8 @@ h2 {
 	box-shadow: 0 0 15px 5px #b0e0ee;
 	border: 2px solid #bebede;
 }
+
+.pageLink{
+    padding-left:50px;
+    text-align:center;
+}
