@@ -71,11 +71,12 @@
                                     </th>
                                 </tr>
                             </thead>
+
                             <tr ng-repeat="review in reviews" class="initiallyHidden">
                                 <td width="100%" colspan="3">
                                     <h4><b>{{review.title}}</b></h4>
-                                    <p><b>Product Id: </b>{{review.reviewer[0].name}}</p>
-                                    <p><b>Short Description:</b> {{review.comment}}</p>
+                                    <p><b>Reviewer : </b>{{review.reviewer[0].name}}</p>
+                                    <p><b>Comments :</b> {{review.comment}}</p>
                                 </td>
                             </tr>
                         </table>
