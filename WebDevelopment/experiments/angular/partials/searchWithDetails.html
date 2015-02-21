@@ -1,0 +1,89 @@
+﻿<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+        <div class="search-wrapper">
+            <label for="title">Manufacturer Name : </label>
+            <form>
+                <input type="text" class="title search-box" name="focus" size="65" ng-model="title" placeholder="Enter any manufacturer name like Apple, Samsung, Nokia etc.. and wait for few seconds.." />
+                <button class="close-icon" type="reset"></button>
+                <span class="input-group-btn">
+                    <button ng-click="fetchProducts()" class="btn btn-default" type="button">Go!</button>
+                </span>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+<div class="tablediv row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+        <table class="table table-striped table-hover table-bordered table-responsive prdtTable" ng-show="products">
+            <thead>
+                <tr>
+                    <th>
+                        Product Image
+                    </th>
+                    <th>
+                        Product description
+                    </th>
+                    <th>
+                        Product price
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in products">
+                    <td width="20%" class="prdtimg"><img class="centeredImg" ng-src="{{product.image}}"></td>
+                    <td width="60%">
+                        <h4><b>{{product.name}}</b></h4>
+                        <p><b>Product Id: </b>{{product.sku}}</p>
+                        <p><b>Short Description:</b> {{product.shortDescription}}</p>
+                        <p><b>Long description : </b>{{product.longDescription}}</p>
+                    </td>
+                    <td width="40%">
+                        <p><b>Regular price : </b>${{product.regularPrice}}</p>
+                        <p><b>Sale Price : </b>${{product.salePrice}}</p>
+                    </td>
+                    <td>
+                        <button ng-click="addToFavorites(product)" class="btn btn-info">
+                            <span class="glyphicon glyphicon-star"></span>
+                        </button>
+                        <a href="#/details/{{product.sku}}" class=" btn btn-primary">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a href="#/comments/{{product.sku}}" class=" btn btn-primary">
+                            Reviews
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+            <!--<tfoot style="text-align:center">
+                <tr>
+                    <td colspan="3">
+                        <span class="pagination">
+                            <span ng-class="prevPageDisabled()">
+                                <a href ng-click="prevPage()">« Prev</a>
+                            </span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span ng-repeat="n in range()"
+                                  ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                                <a href="#">{{n+1}}</a>
+                            </span>
+                            <span ng-class="nextPageDisabled()">
+                                <a href ng-click="nextPage()">Next »</a>
+                            </span>
+                        </span>
+                    </td>
+                </tr>
+            </tfoot> -->
+        </table>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>

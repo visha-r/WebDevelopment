@@ -1,0 +1,84 @@
+﻿<div class="tablediv row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+        <table class="table table-striped table-hover table-responsive prdtTable">
+            <thead>
+                <tr>
+                    <th colspan="2" style="text-align:center">
+                        Product Details
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" style="text-align:center">
+                        <h4><b>{{productDetail.name}}</b></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="prdtimg"><img class="centeredImg" ng-src="{{productDetail.image}}"></td>
+                    <td>
+                        <p><b>Regular price : </b>${{productDetail.regularPrice}}</p>
+                        <p><b>Sale Price : </b>${{productDetail.salePrice}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Short Description</b></p>
+                    </td>
+                    <td>  
+                        <p>{{productDetail.shortDescription}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Long Description</b></p>
+                    </td>
+                    <td>
+                        <p>{{productDetail.longDescription}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Product Dimensions  </b></p>
+                    </td>
+                    <td>
+                        <p ng-show="!productDetail.height || !productDetail.width"> Dimensions currently not available</p>
+                        <p ng-show="productdetail.height && productdetail.width"> {{productDetail.height}} X {{productDetail.width}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Shipping Status  </b></p>
+                    </td>
+                    <td>
+                        <p ng-show="!productDetail.onlineAvailabilityText"> Currently not available</p>
+                        <p ng-show="productDetail.onlineAvailabilityText"> {{productDetail.onlineAvailabilityText}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Shipping Cost  </b></p>
+                    </td>
+                    <td>
+                        <p ng-show="!productDetail.shippingCost"> Price details not available</p>
+                        <p ng-show="productDetail.shippingCost"> ${{productDetail.shippingCost}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Status  </b></p>
+                    </td>
+                    <td>
+                        <p ng-show="!productDetail.orderable"> Status currently not available</p>
+                        <p ng-show="productDetail.orderable"> {{productDetail.orderable}}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+

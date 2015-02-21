@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simple Movie Library</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="css/StyleSheet.css" />
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/MainController.js"></script>
+    <script src="js/MainService.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active" id="homelink"><a href="#/home">Home<span class="sr-only">(current)</span></a></li>
+                        <li id="loginlink"><a href="#/login">Login</a></li>
+                        <li id="searchlink"><a href="#/search">Search</a></li>
+                        <li id="favoritelink"><a href="#/favorites">Favorites</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div ng-view>
+
+        </div>
+    </div>
+</body>
+</html>
