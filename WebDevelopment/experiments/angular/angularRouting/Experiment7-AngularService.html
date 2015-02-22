@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="../css/StyleSheet.css" />
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <script src="../js/CommentsController.js"></script>
+    <script src="../js/MainService.js"></script>
+</head>
+<body ng-app="commentsApp">
+    <div class="main-wrapper">
+        <h1>Experiment 3 - AngularJS custom service part II </h1>
+        <div class="demo-wrapper">
+            <h2>AngularJS custom service to maintain user comments</h2>
+            <span class="instructions">
+                Please go to 'Search' page, search products by manufacturer name, add products to your favorites by clicking the
+                favorite botton, click the eye glyphicon to view the details of a particular product, click the reviews button to
+                see all the reviews of the product addding your own reviews if needed and see all your favorites in 'My favorites' 
+                and your reviews in the 'My Reviews' page. The 'My Reviews' link will appear once you write a review for a product.
+            </span>
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active" id="homelink"><a href="#/home">Home<span class="sr-only">(current)</span></a></li>
+                                <li id="loginlink"><a href="#/login">Login</a></li>
+                                <li id="searchlink"><a href="#/search">Search</a></li>
+                                <li id="favoritelink"><a href="#/favorites">My Favorites</a></li>
+                                <li id="commentlink"><a href="#/myReviews">My Reviews</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+                <div ng-view>
+
+                </div>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        <p id="text">
+            This experiment uses angularJS factory service to store the data common to the entire application. During page navigation
+            the activity carried out in one page might not be informed to the other pages. In that case all pages will be inconsistent
+            with the state of the application. So in order to have a consistent application, factory service is needed. Functionalites
+            that are going to used across the entire application, data that is shared by multiple pages reside in the factory service.
+        </p>
+        <p>
+            The factory service is created giving it a meaningful name.  Once the methods are created inside the service, they are exposed to the
+            outside world using return. The module that wants to invoke the functionality inside the service should name the name exposed.
+            It will then be internally mapped by the service to call the right method. Method creation inside the service is done as how we normally
+            do in the controllers.
+        </p>
+        <p>
+            The experiment lets users to view the details of a particular product.  Also they can view the reviews of a product adding their
+            own. The reviews that they add will be stored in the service and fetched when visiting 'My Reviews' page. Similary the users
+            favorites are maintained.
+        </p>
+        <br />
+        <b>Code Snippet:</b>
+        <br />
+        <br />
+        <table class="code">
+            <tr>
+                <td width="100%">
+                    return { <br />
+                    fetchProducts: fetchProducts, <br />
+                    addToFavorites: addToFavorites, <br />
+                    getFavorites: getFavorites,<br />
+                    addToReviews: addToReviews,<br />
+                    getReviews: getReviews,<br />
+                    }<br />
+                </td>
+            </tr>
+        </table>
+        <br />
+
+        <h2>Source Code</h2>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/Experiment7-AngularService.html" target="_blank">HTML Source</a></div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/js/CommentsController.js" target="_blank">AngularJS Source</a></div>
+        <h2>References</h2>
+        <div><a href="https://www.youtube.com/watch?v=PlAxG8R_zXI" target="_blank">Youtube Lecture</a></div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="../css/RoutingStylesheet.css" />
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <script src="../js/LoginController.js"></script>
+    <script src="../js/MainService.js"></script>
+</head>
+<body ng-app="commentsApp">
+    <div class="main-wrapper">
+        <h1>Experiment 4 - AngularJS User session</h1>
+        <div class="demo-wrapper">
+            <h2>AngularJS custom service to maintain user session</h2>
+            <h4>
+                Please login to the application using 'admin' as username and password.
+            </h4>
+            <div class="container">
+                <nav class="navbar navbar-inverse" ng-controller="MainController">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Online Shopping</a>
+                            <ul class="nav navbar-nav">
+                                <li class="active" id="homelink"><a href="#/home">Home<span class="sr-only">(current)</span></a></li>
+                                <li id="searchlink"><a href="#/search">Search</a></li>
+                                <li id="favoritelink" ng-show="currentuser"><a href="#/favorites">My Favorites</a></li>
+                                <li id="commentlink" ng-show="currentuser"><a href="#/myReviews">My Reviews</a></li>
+
+                            </ul>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <form class="navbar-form navbar-right" ng-show="!currentuser">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Email" ng-model="username" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Password" ng-model="password" class="form-control">
+                                </div>
+                                <button ng-click="login()" class="btn btn-success">Sign in</button>
+                            </form>
+
+                            <ul class="nav navbar-nav navbar-right" ng-show="currentuser">
+                                <li style="color:whitesmoke">Hello &nbsp;&nbsp;{{currentuser}}</li>
+                                <li><a href="#/logout" ng-click="logout()">Logout</a></li>
+                            </ul>
+
+                        </div><!--/.navbar-collapse -->
+                    </div>
+                </nav>
+
+                <div ng-view>
+
+                </div>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        
+        <p id="text">
+            This is a very simple experiment that demonstrates how user login information is stored in the service to make it available
+            for the entire application. As the information showed in every page is user specific, maintaining the user login information
+            is very important. The function meant for login, resides in the service module and the application invokes it through the
+            public name. Once the service confirms that the user is part of the application by checking his username against the list of 
+            all available usernames, it returns the username having a copy of its own and can be queried later.
+        </p>
+        <p id="text">
+            This username is used further to fetch all information specific to this user. Logout button appears once the user logs in, to show that
+            login is successful.
+        </p>
+      
+        <br />
+        <b>Code Snippet:</b>
+        <br />
+        <br />
+        <table class="code">
+            <tr>
+                <td width="100%">
+                    var users = [ <br />
+                    { username: "admin", password: "admin" }, <br />
+                    { username: "user", password: "user" } <br />
+                    ]; <br />
+
+                    var currentuser = null; <br />
+
+                    var login = function (username) { <br />
+                    for (var i in users) { <br />
+                    if (users[i].username == username) { <br />
+                    currentuser = users[i].username; <br />
+                    return currentuser; <br />
+                    } <br />
+                    else <br />
+                    currentuser = null; <br />
+                    } <br />
+                    return currentuser; <br />
+                    } <br />
+                </td>
+            </tr>
+        </table>
+        <br />
+
+        <h2>Source Code</h2>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/Experiment8-AngularService.html" target="_blank">HTML Source</a></div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/js/LoginController.js" target="_blank">AngularJS Source</a></div>
+        <h2>References</h2>
+        <div><a href="https://www.youtube.com/watch?v=PlAxG8R_zXI" target="_blank">Youtube Lecture</a></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

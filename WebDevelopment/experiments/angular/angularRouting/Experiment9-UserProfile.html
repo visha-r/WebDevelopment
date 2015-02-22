@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="../css/Stylesheet.css" />
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <script src="../js/LoginController.js"></script>
+    <script src="../js/UserService.js"></script>
+</head>
+<body ng-app="commentsApp">
+    <div class="main-wrapper">
+        <h1>Experiment 5 -  Managing User Profiles</h1>
+        <div class="demo-wrapper">
+            <h2>AngularJS custom service to maintain user profile</h2>
+            <span class="instructions">
+                Instructions : <br />
+                In this experiment, it is assumed that there are already 2 registered users with their profile information
+                being stored in the service. The users are 'john' and 'steve'. <br />
+                1. Initially login to the application using 'john' as username and password. <br />
+                2. Go to favorites page and see all the favorite products of this user. Also go to 'My reviews'
+                page to see all the reviews written by this user. <br />
+                3. Logout this user and then login with username & password as 'steve' and check out his favorites and reviews.
+            </span>
+            <div class="container">
+                <nav class="navbar navbar-inverse" ng-controller="MainController">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Online Shopping</a>
+                            <ul class="nav navbar-nav">
+                                <li class="active" id="homelink"><a href="#/home">Home<span class="sr-only">(current)</span></a></li>
+                                <li id="searchlink"><a href="#/search">Search</a></li>
+                                <li id="favoritelink" ng-show="currentuser"><a href="#/favorites">My Favorites</a></li>
+                                <li id="commentlink" ng-show="currentuser"><a href="#/myReviews">My Reviews</a></li>
+
+                            </ul>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <form class="navbar-form navbar-right" ng-show="!currentuser">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Email" ng-model="username" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Password" ng-model="password" class="form-control">
+                                </div>
+                                <button ng-click="login()" class="btn btn-success">Sign in</button>
+                            </form>
+
+                            <ul class="nav navbar-nav navbar-right" ng-show="currentuser">
+                                <li style="color:whitesmoke">Hello &nbsp;&nbsp;{{currentuser}}</li>
+                                <li><a href="#/logout" ng-click="logout()">Logout</a></li>
+                            </ul>
+
+                        </div><!--/.navbar-collapse -->
+                    </div>
+                </nav>
+
+                <div ng-view>
+
+                </div>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+
+        <p id="text">
+            This experiment is an enhancement of the previous one by storing all profile information in the service. Here it is
+            assumed that there are already 2 users in the system with their profile information like favorite products and reviews
+            being stored in the service. As database is not available at this point, service acts the place to save all user
+            information.
+
+        </p>
+        <br />
+        <b>Code Snippet:</b>
+        <br />
+        <br />
+        <table class="code">
+            <tr>
+                <td width="100%">
+                    var users = [ <br />
+                    { <br />
+                    username: "admin", password: "admin", favoriteProducts: [5571203, 9878299, 4442019, 3318043], <br />
+                    reviews: [38373652, 35664486, 35617114] <br />
+                    }, <br />
+                    { <br />
+                    username: "user", password: "user", favoriteProducts: [2607018, 1752772, 6876557, 3421338], <br />
+                    reviews: [43246905, 39486888, 39708452] <br />
+                    } <br />
+                    ]; <br />
+                </td>
+            </tr>
+        </table>
+        <p id="text">
+            Once an user logs in, his username is checked against the list of usernames already in the system. If a match is found,
+            the service stores the username in the currentuser variable.
+        </p>
+        <br />
+        <b>Code Snippet:</b>
+        <br />
+        <br />
+        <table class="code">
+            <tr>
+                <td width="100%">
+                    var currentuser = null; <br />
+                    var login = function (username) { <br />
+                    for (var i in users) { <br />
+                    if (users[i].username == username) { <br />
+                    currentuser = users[i].username; <br />
+                    return currentuser; <br />
+                    } <br />
+                    else <br />
+                    currentuser = null; <br />
+                    } <br />
+                    return currentuser; <br />
+                    } <br />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <p id="text">
+            When user clicks on the 'My favorites' link, the call will be redirected to the service. Each user profile will
+            have a list of product id's marked as their favorite. It also has a list of review id's they have written so far.
+            To fetch the actual products and reviews, the id's are iterated over giving an http call to the web server.
+        </p>
+        <br />
+        <b>Code Snippet:</b>
+        <br />
+        <br />
+        <table class="code">
+            <tr>
+                <td width="100%">
+                    var getReviews = function () { <br />
+                    for (var j in users) { <br />
+                    var reviewIds = []; <br />
+                    if (users[j].username == currentuser) { <br />
+                    reviewIds = users[j].reviews; <br />
+                    for (var r in users[j].reviews) { <br />
+                    $http.jsonp('http://api.remix.bestbuy.com/v1/reviews(id=' + users[j].reviews[r] + ')?format=json&show=all&callback=JSON_CALLBACK&apiKey=asgfreeefrgg') <br />
+                    .success(function (response) { <br />
+                    console.log('printing response ' + r); <br />
+                    myReviews.push(response.reviews[0]); <br />
+                    console.log(response); <br />
+                    }); <br />
+                    } <br />
+                    return myReviews; <br />
+                    } <br />
+                    } <br />
+                    }; <br />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <h2>Source Code</h2>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/Experiment9-UserProfile.html" target="_blank">HTML Source</a></div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/js/LoginController.js" target="_blank">AngularJS Source</a></div>
+        <h2>References</h2>
+        <div><a href="https://www.youtube.com/watch?v=PlAxG8R_zXI" target="_blank">Youtube Lecture</a></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
