@@ -35,6 +35,7 @@
         for (var i in users) {
             if (users[i].username == username) {
                 currentuser = users[i].username;
+                return currentuser;
             }
             else
                 currentuser = null;
@@ -42,11 +43,17 @@
         return currentuser;
     }
 
+    var logout = function () {
+        currentuser = null;
+    }
+
     return {
         fetchProducts: fetchProducts,
         addToFavorites: addToFavorites,
         getFavorites: getFavorites,
         addToReviews: addToReviews,
-        getReviews : getReviews
+        getReviews: getReviews,
+        login: login,
+        logout:logout
     }
 })
