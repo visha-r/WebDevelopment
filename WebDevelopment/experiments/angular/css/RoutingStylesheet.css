@@ -147,14 +147,18 @@ h2 {
 }
 
 .login{
-    margin-top:5%;
+    margin-top: 5% ;
     margin-right:25%;
     margin-left:25%;
+}
+
+.menuContainer{
+    padding-top:100px;
 }
 
 .instructions{
     text-align:justify;
     font-style:italic;
-    font-size:18px;
+    font-size:22px;
     color:maroon;
 }
