@@ -1,0 +1,30 @@
+﻿<p>
+    All my experiments for this week were based on angularJS routing. Its the single page application property that makes angularJS stand unique
+    among hundreds of similar frameworks.  I started with a simple application which has a menubar at the top. Clicking any of the
+    links on the menubar will take the user to a different page but with the feel that he is still in the same page.
+    The application used has links such as Home, Login, Search and Favorites.
+</p>
+<p>In the 1st experiment, the user can search products by manufacturer name and in the resulting products returned, he can make some 
+    of his products as his favorite ones. The problem here is that, when the user navigates to the favorites page, all the products 
+    he marked as favorite will not be available as the data was not carried over.</p>
+<p>
+    The 2nd experiment fixes this issue by using a service which maintain all data common to all the modules. So here, the user can
+    navigate to his favorite page and see all his favorite products.
+</p>
+<p>
+    The 3rd experiment lets the user to see the reviews of all the products and add his own reviews. The reviews that the user writes
+    for any product will be available for him in the ‘My Reviews’ page.
+</p>
+<p>
+    The next experiment focuses on user login. Because maintaining user profile can only be achieved through login information this
+    experiment is the basis for managing user specific information. Once the user logs in his username is stored in the service so any
+    module in the application can query the service anytime to get the same.
+</p>
+<p>
+    The last experiment is an enhancement of the previous one by using the user information such as the user name to load his profile
+    specific information like his comments and favorite products. Here it is assumed that there are already 2 registered users with their 
+    profile information being stored in the service. Based on the login name, the appropriate profile will be loaded.
+</p>
+<p>
+    The information that were hard coded in service this week will be retrieved from mongoDB database in next week's experiments.
+</p>
