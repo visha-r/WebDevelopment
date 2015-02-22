@@ -41,19 +41,19 @@ app.controller('MainController', function ($scope, $route) {
  app.config(function ($routeProvider) {
      $routeProvider
       .when('/home', {
-        templateUrl: 'partials/Wallpaper.html'
+        templateUrl: '../partials/Wallpaper.html'
         })
 
       .when('/login', {
-            templateUrl: 'partials/Login.html'
+            templateUrl: '../partials/Login.html'
         })
       .when('/search', {
-          templateUrl: 'partials/search.html',
+          templateUrl: '../partials/search.html',
           controller: 'searchController'
       })
 
      .when('/favorites', {
-         templateUrl: 'partials/favorites.html',
+         templateUrl: '../partials/favorites.html',
          controller: 'FavouritesController'
      });
 

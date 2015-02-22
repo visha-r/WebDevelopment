@@ -41,30 +41,30 @@ app.controller('MainController', function ($scope, $route) {
 app.config(function ($routeProvider) {
     $routeProvider
      .when('/home', {
-         templateUrl: 'partials/Wallpaper.html'
+         templateUrl: '../partials/Wallpaper.html'
      })
 
      .when('/login', {
-         templateUrl: 'partials/Login.html'
+         templateUrl: '../partials/Login.html'
      })
      .when('/search', {
-         templateUrl: 'partials/searchWithDetails.html',
+         templateUrl: '../partials/searchWithDetails.html',
          controller: 'searchController'
      })
     .when('/details/:sku', {
-        templateUrl: 'partials/ProductDetails.html',
+        templateUrl: '../partials/ProductDetails.html',
         controller: 'DetailsController'
     })
     .when('/favorites', {
-        templateUrl: 'partials/favorites.html',
+        templateUrl: '../partials/favorites.html',
         controller: 'FavouritesController'
     })
     .when('/comments/:sku', {
-        templateUrl: 'partials/reviews.html',
+        templateUrl: '../partials/reviews.html',
         controller: 'ReviewsController'
     })
     .when('/myReviews', {
-        templateUrl: 'partials/MyReviews.html',
+        templateUrl: '../partials/MyReviews.html',
         controller: 'MyReviewsController'
     })
 

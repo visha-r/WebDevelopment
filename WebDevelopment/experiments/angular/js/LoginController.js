@@ -34,38 +34,34 @@ $(window).load(function () {
     $("#homelink").click();
 });
 
-app.controller('MainController', function ($scope, $route) {
-
-});
-
 app.config(function ($routeProvider) {
     $routeProvider
      .when('/home', {
-         templateUrl: 'partials/Wallpaper.html'
+         templateUrl: '../partials/Wallpaper.html'
      })
 
      .when('/login', {
-         templateUrl: 'partials/ActualLogin.html',
-         controller: 'LoginController'
+         templateUrl: '../partials/ActualLogin.html',
+         controller: 'MainController'
      })
      .when('/search', {
-         templateUrl: 'partials/searchWithDetails.html',
+         templateUrl: '../partials/searchWithDetails.html',
          controller: 'searchController'
      })
     .when('/details/:sku', {
-        templateUrl: 'partials/ProductDetails.html',
+        templateUrl: '../partials/ProductDetails.html',
         controller: 'DetailsController'
     })
     .when('/favorites', {
-        templateUrl: 'partials/favorites.html',
+        templateUrl: '../partials/favorites.html',
         controller: 'FavouritesController'
     })
     .when('/comments/:sku', {
-        templateUrl: 'partials/reviews.html',
+        templateUrl: '../partials/reviews.html',
         controller: 'ReviewsController'
     })
     .when('/myReviews', {
-        templateUrl: 'partials/MyReviews.html',
+        templateUrl: '../partials/MyReviews.html',
         controller: 'MyReviewsController'
     })
 
@@ -136,12 +132,31 @@ app.controller('MyReviewsController', function ($scope, $http, ProductService) {
 });
 
 app.controller('LoginController', function ($scope, $http, ProductService) {
-    $scope.login = function () {
-        var username = $scope.username;
-        var password = $scope.password;
+        $scope.login = function () {
+            var username = $scope.username;
+            console.log(username)
         $scope.currentuser = ProductService.login(username);
         console.log($scope.currentuser);
     }
 });
+
+app.controller('MainController', function ($scope, ProductService) {
+    $scope.currentuser = null;
+    $scope.login = function () {
+        var username = $scope.username;
+        console.log(username)
+        $scope.currentuser = ProductService.login(username);
+        console.log($scope.currentuser);
+    }
+
+    $scope.logout = function () {
+        $scope.currentuser = null;
+        $scope.username = null;
+        $scope.password = null;
+        ProductService.logout();
+        console.log($scope.currentuser);
+    }
+});
+
 
 
