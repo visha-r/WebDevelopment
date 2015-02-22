@@ -66,7 +66,7 @@
                     <table>
                         <tr>
                             <td>
-                                <div class="buttons button1"><a href="story/index.htm?../experiments/story.txt" target="_blank" class="round green">Experiment<span class="round">Ready to see all my experiments?</span></a></div>
+                                <div class="buttons button1"><a href="story/index.htm?../experiments/story.txt" target="_blank" class="round green">Experiments<span class="round">Ready to see all my experiments?</span></a></div>
                             </td>
                             <td>
                                 <div class="buttons button2"><a href="project/projectHome.html" class="round red">Project<span class="round">Take a look at my project. You will really like it!!</span></a></div>
