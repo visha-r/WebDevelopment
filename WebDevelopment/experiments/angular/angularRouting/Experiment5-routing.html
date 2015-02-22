@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Visha's Experiments</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="../css/RoutingStylesheet.css" />
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <script src="../js/RoutingController.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div class="main-wrapper">
+        <h1>AngularJS Experiment 1 - Single Page application  </h1>
+        <div class="demo-wrapper">
+            <h2>Single Page Application Demo</h2>
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#/home">Home<span class="sr-only">(current)</span></a></li>
+                                <li><a href="#/login">Login</a></li>
+                                <li><a href="#/search">Search</a></li>
+                                <li><a href="#/favorites">Profile</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+                <div ng-view>
+
+                </div>
+            </div>
+        </div>
+        <h2>About the experiment</h2>
+        <p id="text">
+            This experiment uses angularJS routing property to navigate to different pages but still making the user feel that he is in 
+            the same page. It loads a new page without refreshing the whole page. This specific property of angularJS makes it stand
+            unique among other similar frameworks. 'ngRoute' is a service that is used for naviagtion of this sort. The configuration of
+            ngRoute takes in the actual path and maps it to the corresponding html file and controller. The new file so mapped will use the
+            mapped the attributes and methods in its mapped controller. Every page will have its won controller.
+        </p>
+        <p>
+            When user clicks a link, it generates a path which is then searched in the config for the url match. Once the match is found, the
+            corresponsing HTML file is loaded. The favorites that the user selects will not be avaiable as the data is not carried out to the
+            next page using service. Its covered in the next experiment.
+        </p>
+            <br />
+            <br />
+            <b>Code Snippet:</b>
+            <br />
+            <br />
+            <table class="code">
+                <tr>
+                    <td width="100%">
+                        app.config(function ($routeProvider) { <br />
+                        $routeProvider <br />
+                        .when('/home', { <br />
+                        templateUrl: 'partials/Wallpaper.html' <br />
+                        }) <br />
+                        <br />
+                        .when('/login', { <br />
+                        templateUrl: 'partials/Login.html' <br />
+                        }) <br />
+                        <br />
+                        .when('/search', { <br />
+                        templateUrl: 'partials/search.html', <br />
+                        controller: 'searchController' <br />
+                        }) <br />
+                        <br />
+                        .when('/favorites', { <br />
+                        templateUrl: 'partials/NoFavorites.html' <br />
+                        }); <br />
+                        <br />
+                        });<br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+        
+        <h2>Source Code</h2>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/Experiment5-routing.html" target="_blank">HTML Source</a></div>
+        <div><a href="../../fileview/Default.aspx?~/experiments/angular/js/RoutingController.js" target="_blank">AngularJS Source</a></div>
+        <h2>References</h2>
+        <div><a href="https://www.youtube.com/watch?v=jelXe-t2MPQ" target="_blank">Youtube Lecture</a></div>
+    </div>
+</body>
+</html>
