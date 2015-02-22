@@ -1,0 +1,7 @@
+﻿../../../story/whatisnext.htm?../experiments/angular/angularRouting/story.txt			   What is Next?
+Experiment5-Routing.html			AngularJS Routing - Single Page Application Demo
+Experiment6-AngularService.html		AngularJS custom service to manage user's favorites
+Experiment7-AngularService.html		AngularJS custom service - part II to mage user's reviews and favorites
+Experiment8-AngularLogin.html		AngularJS login demo
+Experiment9-UserProfile.html		Managing User Profiles
+
