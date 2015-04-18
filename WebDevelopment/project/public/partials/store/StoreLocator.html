@@ -1,0 +1,71 @@
+<div class="homePage">
+<div class="row">
+	<div class="col-sm-3">
+    </div>
+ 	<div class="col-sm-6">
+ 		<div class="instructions linePadding"> Store Locator </div>
+ 		<div class="input-group linePadding">
+            <input type="text" ng-model="zipcode" class="form-control" placeholder="Search stores nearby using zipcode">
+            <span class="input-group-btn">
+                <button ng-click="searchStores()" class="btn btn-primary" type="button">
+                <span class="glyphicon glyphicon-search"></span></button>
+            </span>
+     </div>
+     </div>
+ 	<div class="col-sm-3">
+    </div>
+ </div> 
+
+ <div class="row topPadding">
+    <div class="col-sm-2">
+    </div>
+     
+    <div class="col-sm-8">
+    	<div ng-show="stores.length == 0" >
+        	<span class="instructions topPadding"> Sorry you don't have any stores nearby your place :-(</span>
+		</div>	
+		
+		<div class="instructions" ng-show="stores.length>0">
+			Stores within 20 miles of your location
+		</div>
+		
+        <table class="table table-striped table-hover table-bordered table-responsive" ng-show="stores.length>0">
+            <thead>
+                <tr>
+                    <th>
+                        Store Name
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Hours
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="store in stores">
+					<td>
+						{{store.storeType}}
+					</td>
+					<td>
+						<div>{{store.address}}</div>
+						<div>{{store.city}}</div>
+						<div>{{store.fullPostalCode}}</div>
+					</td>
+					<td>
+						<div ng-repeat="hour in store.hours.split(';')">
+						{{hour}}
+						</div>
+					</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+
+</div>
+
+    
