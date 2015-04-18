@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/DocumentStyle.css" />
+<meta charset="UTF-8">
+<title>Registration page</title>
+</head>
+<body>
+	<h2>Registration page </h2>	
+	<div>The Registration page helps the user to become a member of the application by signing-up. The user can only browse through
+	the products if he is not a member of the application. To experience all the functionalities like writing reviews, bookmarking
+	a product and following other users, the user has to be registered with the application. 
+	</div>
+	
+	<h4>Registration page in detail : </h4>	
+	<div>When user clicks on the Sign up link, the registration form will look like the following. All the fields have a self-explanatory
+	place holder mentioning what value the form expects. It is clear from the screenshot given below, that the submit button is
+	initially disabled. The submit button will be enabled only if the user provides valid information for all the required fields.
+	</div>
+	<div class="linePadding">
+        <img class="docImages" alt="Image currently unavailable" src="../images/documentation_images/doc-registrationBlank.png">
+	</div>
+	
+	<div class="linePadding">
+		<h4>Registration form validation : </h4>
+	</div>
+	
+	<div>
+		Validation has been carried out for all required fields. In addition to checking for blank values, the form also checks for
+		valid username when user tries to register. If the username which the user is trying to choose has already been taken
+		by some other user, error will be thrown. Also error will be thrown if the passwords entered don't match with each other.
+		In short the following are the different errors thrown o this page for invalid data :
+		<ol>
+		<li> First name is left empty</li>
+		<li> Email is left empty or entered email address is not of the form example@domain.com</li>
+		<li> Username is empty or username is already taken by someother user </li>
+		<li> Password is empty or passwords entered don't match each other</li>
+		</ol>
+		
+		The registration form with all possible error messages is shown below :
+	</div>
+	
+	<div>
+	<img class ="docImages" alt="Image currently unavailable" src="../../images/doc-registrationErrors.png">
+	</div>
+	
+		
+	<h4>Technologies used :</h4>
+	<ul>
+	<li> HTML5 </li>
+	<li> CSS3 </li>
+	<li> AngularJS (validation through directives)</li>
+	</ul>
+</body>
+</html>

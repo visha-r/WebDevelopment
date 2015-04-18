@@ -1,5 +1,213 @@
-﻿ul.master_navigation {
-    font-size: 100%;
+﻿@media screen and (max-width:650px) {
+
+.button1{
+    float :left;
+}
+.button_links {
+    padding: 15% 30% 0% 20%;
+}
+
+    .contact {
+    height: 15%;
+    width: 15%;
+    border-radius: 50% 50%;
+    
+}
+
+
+.paddingLeft {
+    padding-left: 40%;
+    padding-top: 15px;
+}
+
+#texts{
+    font-size:17px;
+}
+
+    ul.master_navigation {
+        font-size: 17px;
+    }
+
+    #contacts {
+    padding: 5% 0% 0% 30%;
+}
+    .textColor{
+    color : whitesmoke;
+    font-weight : bold;
+}
+
+}
+
+@media screen and (min-width:650px) and (max-width:780px) {
+    .button_links {
+        padding: 5% 0% 0% 0%;
+    }
+
+    .textColor{
+    color : whitesmoke;
+    padding-left : 20%;
+    font-weight : bold;
+}
+
+    .round:hover {
+        width: 130%;
+        height: 130%;
+        left: -15%;
+        top: -15%;
+        /*font-size: 150%;*/
+        font-size : 24px;
+        padding-top: 40%;
+        -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        -o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        z-index: 2;
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+
+    .contact {
+    height: 16%;
+    width: 16%;
+    border-radius: 50% 50%;
+}
+
+#contacts {
+    padding: 5% 20% 0% 30%;
+}
+
+
+.paddingLeft {
+    padding: 3% 20% 0% 38%;
+}
+
+#texts{
+    font-size:19px;
+}
+
+ul.master_navigation {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width:780px) and (max-width:1050px) {
+    .button_links {
+    padding: 5% 0% 0% 20%;
+    
+}
+
+    .textColor{
+    color : whitesmoke;
+    padding-left : 30%;
+    font-weight : bold;
+}
+        .round:hover {
+        width: 130%;
+        height: 130%;
+        left: -15%;
+        top: -15%;
+        /*font-size: 150%;*/
+        font-size : 24px;
+        padding-top: 40%;
+        -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        -o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        z-index: 2;
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+
+    .contact {
+    height: 16%;
+    width: 16%;
+    border-radius: 50% 50%;
+}
+
+#contacts {
+    padding: 5% 10% 0% 50%;
+}
+
+.paddingLeft {
+    padding: 3% 20% 0% 55%;
+}
+
+#texts{
+    font-size:19px;
+}
+
+ul.master_navigation {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width:1050px) {
+    .button_links {
+    padding: 5% 7% 0% 38%;
+}
+
+        .round:hover {
+        width: 130%;
+        height: 130%;
+        left: -15%;
+        top: -15%;
+        /*font-size: 125%;*/
+        font-size : 24px;
+        padding-top: 30%;
+        -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        -o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        -moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        z-index: 2;
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+
+    .contact {
+    height: 10%;
+    width: 10%;
+    border-radius: 50% 50%;
+}
+   
+#contacts {
+    padding: 5% 0% 0% 50%;
+}
+
+.github {
+    height: 15%;
+    width: 13%;
+    border-radius: 60% 60%;
+}
+
+.paddingLeft {
+    padding-left: 55%;
+    padding-top: 15px;
+}
+
+#texts{
+    font-size:21px;
+}
+
+ul.master_navigation {
+        font-size: 21px;
+    }
+
+.textColor{
+    color : whitesmoke;
+    padding-left : 40%;
+    font-weight : bold;
+}
+
+}
+
+
+ul.master_navigation {
     font-weight: bold;
     text-align: center;
     list-style: none;
@@ -13,13 +221,13 @@
     }
 
 ul li a {
-    color: ghostwhite;
+    color: #88f;
     font-weight: bold;
     text-decoration: none;
 }
 
     ul li a:visited {
-        color: #88f;
+        color: greenyellow;
     }
 
     ul li a:hover {
@@ -35,8 +243,7 @@ body {
     width: 90%;
     max-width: 100%;
     margin: 0;
-    padding: 2% 5% 2% 10%;
-    font-size: 110%;
+    padding: 2% 3% 2% 5%;
     background-image: url(images/my_pics/background_img3.jpg);
 }
 
@@ -48,8 +255,10 @@ body {
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
     float: left;
-    border-radius: 50% 50%;
-    padding: 2% 2% 2% 2%;
+    z-index : 1;
+   border-radius: 50% 50%;
+   /* padding: 2% 2% 2% 2%; */
+    margin : 2%;
 }
 
 #content {
@@ -59,11 +268,11 @@ body {
 }
 
 #texts {
-    padding: 0% 8% 5% 3%;
+    padding: 0% 8% 3% 3%;
     font-style: italic;
     font-weight: bold;
     text-align: justify;
-    color: floralwhite;
+    color: whitesmoke;
 }
 
 .links {
@@ -89,17 +298,15 @@ body {
     display: inline-block;
     width: 150px;
     height: 150px;
-    float: left;
+   /* float: left;*/
     text-align: center;
+    padding : 1% 5% 5% 5%;
 }
 
 td {
-    padding: 8% 2% 1% 30px;
+    padding: 4% 2% 1% 15%;
 }
 
-.button_links {
-    padding: 0% 10% 0% 40%;
-}
 
 @-moz-keyframes rotate {
     0% {
@@ -148,7 +355,7 @@ td {
     top: 0;
     width: 100%;
     height: 100%;
-    padding-top: 35%;
+    padding-top: 20%;
     text-decoration: none;
     text-align: center;
     font-size: 100%;
@@ -166,27 +373,17 @@ td {
     border-style: solid;
 }
 
-    .round:hover {
-        width: 130%;
-        height: 130%;
-        left: -15%;
-        top: -15%;
-        font-size: 125%;
-        padding-top: 35%;
-        -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-        -o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-        -moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-        box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-        z-index: 2;
-        -webkit-transform: rotate(-360deg);
-        -moz-transform: rotate(-360deg);
-        -o-transform: rotate(-360deg);
-        transform: rotate(-360deg);
-    }
+
 
 a.red {
     background-color: rgba(239,57,50,1);
-    color: rgba(133,32,28,1);
+    /*color: rgba(133,32,28,1);*/
+    background-image : url(images/my_pics/project_img.jpeg);
+    padding-top : 60px;
+     color: #333300;
+    font-size : 22px;
+    font-weight : bold;
+    font-style : italic;
     border-color: rgba(133,32,28,.2);
 }
 
@@ -196,17 +393,32 @@ a.red {
 
 a.green {
     background-color: rgba(1,151,171,1);
-    color: rgba(0,63,71,1);
+    background-image : url(images/my_pics/experiment_img.jpeg);
+    /*color: rgba(0,63,71,1);*/
+    padding-top : 60px;
+     color: #333300;
+    font-size : 22px;
+    font-weight : bold;
+    font-style : italic;
     border-color: rgba(0,63,71,.2);
 }
 
     a.green:hover {
         color: rgba(1,151,171,1);
+        font-size : 26px;
+    font-weight : bold;
+    font-style : italic;
     }
 
 a.yellow {
     background-color: rgba(252,227,1,1);
-    color: rgba(153,38,0,1);
+    /*color: rgba(153,38,0,1);*/
+    background-image : url(images/my_pics/blog-img.jpeg);
+    padding-top : 60px;
+     color: #333300;
+    font-size : 22px;
+    font-weight : bold;
+    font-style : italic;
     border-color: rgba(153,38,0,.2);
 }
 
@@ -225,11 +437,13 @@ a.yellow {
     border: none;
     padding: 40% 20% 0 20%;
     color: #fff;
+    font-size : 18px;
 }
 
 .round span:hover {
     opacity: .85;
-    font-size: 16px;
+    font-size : 18px;
+    color : #fff;
     -webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
     -moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
     -o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
@@ -248,17 +462,18 @@ a.yellow {
     background: rgba(161,145,0,.7);
 }
 
-.contact {
-    height: 10%;
-    width: 10%;
+.heading {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(151,35,36);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bolder;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 0.2em white, 0 0 0.2em white,
+        0 0 0.2em white;
+    
 }
 
-#contacts {
-    padding: 5% 0% 0% 50%;
-}
 
-.github {
-    padding-left: 9%;
-    height: 35%;
-    width: 23%;
-}
+
+

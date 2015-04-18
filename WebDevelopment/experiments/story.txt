@@ -4,3 +4,8 @@
 ../story/index.htm?../experiments/bootstrap/story.txt				Week 03 - Bootstrap & jQuery Experiments
 ../story/index.htm?../experiments/angular/story.txt					Week 04 - AJAX & AngularJS
 ../story/index.htm?../experiments/angular/angularRouting/story.txt	Week 05 - AngularJS Routing & Custom Service
+../story/index.htm?../experiments/nodejs/story.txt					Week 06 - Node.js experiments hosted in Openshift
+../story/index.htm?../experiments/mongodb/story.txt					Week 07 - MongoDB with RESTful API 
+../story/index.htm?../project/story.txt								Week 08 - Project based experiments
+../story/index.htm?../project/story1.txt							Week 09 - Experiments on project functionalities - II
+../story/index.htm?../project/story2.txt							Week 10 - Final week for project functionalities

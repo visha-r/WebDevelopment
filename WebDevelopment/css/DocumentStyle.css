@@ -1,0 +1,109 @@
+body{
+	font-size: 21px;
+	text-align: justify;
+	padding-right : 50px;
+	padding-left : 40px;
+	margin-bottom: 50px;
+}
+
+.docImages{
+	width : 90%;
+	height : 450px;
+	margin-left : 50px;
+	margin-right : 50px;
+}
+
+.docImages1{
+	width : 70%;
+	height : 800px;
+	margin-left : 200px;
+	margin-right : 200px;
+}
+
+.docMenu{
+	width : 90%;
+	height : 300px;
+	margin-left : 50px;
+	margin-right : 50px;
+}
+
+.myStyle{
+	width : 90%;
+	height : 700px;
+	margin-left : 100px;
+	margin-right : 100px;
+}
+
+.reviewStyle{
+	width:550px;
+	height : 200px;
+	margin-left : 10px;
+}
+
+.linePadding{
+	padding-top : 15px;
+}
+
+.thumbnails{
+	width : 375px;
+	height : 350px;
+}
+
+.menuBar{
+	width : 90%;
+	height : 250px;
+	margin-left : 25px;
+	margin-right : 25px;
+}
+
+.editProfileStyle{
+	width:700px;
+	height : 200px;
+	margin-left : 150px;
+}
+
+.textalign{
+	text-align: center;
+}
+
+.leftrightpadding{
+	margin-left : 575px;
+	margin-right : 575px;
+}
+
+.bow{
+	margin-left : 540px;
+	margin-right : 600px;
+	width:150px; 
+	height:150px;
+}
+
+h4{
+	font-size: 27px;
+	color: #2d6596;
+	margin-bottom: 10px;
+	margin-top: 25px;
+	text-decoration: underline;
+}
+
+h2{
+	text-align: center;
+	font-size: 35px;
+	color: #2d6596;
+	margin-bottom: 25px;
+	margin-bottom: 15px;
+}
+
+.flow{
+	height : 550px;
+	width : 80%;
+	margin-left : 100px;
+	margin-right : 100px;
+}
+
+.database{
+	height : 700px;
+	width : 85%;
+	margin-left : 20px;
+	margin-right : 100px;
+}

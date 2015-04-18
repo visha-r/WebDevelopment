@@ -1,0 +1,73 @@
+﻿<h3>Week 10 - Final week for project functionalities </h3>
+
+<p>
+    This week I am almost done with all the functionalities I aimed to include in my project. I am planning
+    to focus more on the UI design in the forthcoming weeks. I did the following experiments this week :
+</p>
+
+<ol>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt16-storeLocator.html" target="_blank">Store Locator </a></li>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt17-editCartCount.html" target="_blank">Editing cart information </a></li>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt18-handlingDuplicates.html" target="_blank">Handling duplicate items in cart </a> </li>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt19-updateUserDetails.html" target="_blank">Changing user password using angular directive </a> </li>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt20-dynamicFollowLink.html" target="_blank">Making Follow/Unfollow user link dynamic </a> </li>
+</ol>
+
+<p>
+    <b>Store Locator :</b> <br />
+    As users will be more interested in exploring the stores nearby, this experiment aims at finding all stores nearby the given zipcode.
+    As it is not always possible to get stores at the exact location, I am using a range of 10 miles radius. So stores available within 10
+    miles radius of the given zipcode will be returned.
+</p>
+
+<p>
+    <b>
+        Editing cart information :
+    </b>
+    <br />
+    This experiment is about editing the cart information such as the product count. Once the user decides to add a product, to the cart,
+    he might want to increase/decrease the count before checking it out. Specifying the count to any number greater than 0, will update the
+    count. If the count is 0, the product will be removed from the cart thinking that the user is no longer in interested in the product.
+    The user can also explicitly delete the product from the list by clicking the delete button.
+
+</p>
+
+<p>
+    <b>
+        Handling duplicate items in cart :
+    </b>
+    <br />
+    This experiment is about handling the count for duplicate items in the cart. The user will sometimes try to add a product, which is
+    already in the cart. In that case, the already existing product count has to be increased by 1 instead of adding a new product to the
+    cart. This will save the life of both the buyer as well as the seller. I have handled this case by checking if the product that the
+    user tries to add to the cart is already existing. If it exists, I update the product count otherwise create a new product with count
+    initialized to 1. Accordingly the product count in the menubar badge is updated. Also the totalprice is updated based on the newly
+    updated count.
+
+</p>
+
+<p>
+    <b>
+        Changing user password using angular directive :
+    </b> <br />
+    Though this experiment appears to be simple, it is not so. Because when user tries to change his password, he must enter his
+    old password for security. I have written an angular directive which checks if the old password entered matches the current one
+    in the database. Based on the value returned from the database,the case will be handled. Also I have written directives to
+    check if the new passwords re-entered match each other.
+</p>
+
+<p>
+    <b>
+        Making Follow/Unfollow user link dynamic :
+    </b> <br />
+    This experiment is about about making the follow/unfollow user link dynamic, as showing the user 'Follow user' link
+    for another user who this user is already following will lead to errors. Also it is not meaningful to show 'Follow user' link to a
+    user, who is already followed by this user. The user can choose to unfollow a user either following this link
+    in the user detail's page or the one under 'network' tab in profile page.
+</p>
+
+<p>
+    This week gave me the satification that I have covered all the required functionalities of the project. Stay tuned for a better
+    UI design next week!!!
+</p>
+

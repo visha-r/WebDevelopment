@@ -1,0 +1,53 @@
+﻿<h3>Week 08 - Busy project week</h3>
+
+<p>
+    I would say my experiments on project started since week - 4. The experiments that I did since week - 4 helped me a lot to build my project very quick with basic functionalities. This week I focused on doing experiments
+    adding enhancing features to my project. This week I worked on the following experiments :
+</p>
+
+<ol>
+
+    <li> User authentication using passport </li>
+    <li> Product details page design </li>
+    <li> Rendering stars for user's rating </li>
+    <li> Adding and rendering local reviews with remote reviews </li>
+    <li>Connecting local users </li>
+    
+</ol>
+<p>
+    <b> User authentication using passport </b> <br />
+    So far I had been doing all the authentication on the client side by fetching all the users from the database and comparing it with the current user everytime. But passport rescued me from such a lengthy processing.
+    So my first experiment was about using passport to authenticate user. The user can browse through the products without logging in. But to add a product to his favorite list or cart and to view his profile information
+    the user needs to be logged in. I used interceptors on client side to authenticate the user.
+</p>
+
+<p>
+    <b>Product details page design </b> <br />
+    The 2nd experiment was about designing the product details page. The product details page plays a major role in online shopping as the user’s decision on buying a product depends on the product features and price
+    he sees in the details page. So I designed this page with careful attention showing all necessary details. This page also has ‘Add to cart’ button so the
+    user can add the product to his part if he is interested.
+</p>
+
+<> <b> Rendering stars for user's rating </b> <br/>
+    The 3rd experiment was to render stars for numerical rating. As graphical representation is much easier to interpret i wanted to display the product rating as stars. So this experiment can display only stars for
+    rating that appears as whole number. I am planning to work on decimal number rating in the forthcoming experiments.
+</p>
+
+<p>
+    <b> Adding and rendering local reviews with remote reviews </b> <br />
+    The 4th experiment was the most interesting of all, combining local data with remote data. This experiment lets users to add reviews to a product. This experiment lets users to add their
+    own reviews to a product. Since the remote web service does not give any option to update its database, these reviews
+    are stored in the local database. The review is added in the product collection. When a remote call is made to fetch the
+    reviews of a product, it is also checked locally if there is any local review for the same product. If there is any, both
+    lists are concatenated rendering everything. If there is no local review for the product, only the remote ones are displayed
+    and vice versa.
+</p>
+
+<p>
+    <b>Connecting local users </b> <br />
+    The last experiment was about connecting. Users who are registered in the system can write reviews for products. While listing the reviews links to these local reviewers will be provided
+    following it will lead to the reviewer’s profile. The profile of the reviewers from the remote database will not be
+    available as it is not provided by the web service due to privacy issues.
+</p>
+
+<p>This week I updated my project with feature enhancements to existing basic functionalities. Eager to explore and add more advanced features in the coming weeks. Stay tuned!!!</p>

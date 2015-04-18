@@ -1,0 +1,6 @@
+﻿../../story/whatisnext.htm?../experiments/mongodb/story.txt									What is Next?
+http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt1-getProducts.html					MongoDB experiment exhibiting CRUD operations
+http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt2-addReviews.html						MongoDB documents with one-to-many mapping
+http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt3-addFavorites.html					MongoDB with RESTful Api
+http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt4-prdtCategorization.html				Search menu by category and managing shopping cart information
+http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt5-userRegistration.html				User registration

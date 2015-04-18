@@ -1,0 +1,73 @@
+﻿<h3>Week 09 - Experiments on project's core functionalities </h3>
+
+<p>
+    My project is getting more and more interesting as I am working on the core functionalities. The experiments
+    I did this week are as follows :
+</p>
+
+<ol>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt11-registrationValidation.html" target="_blank">Registration form validation </a> </li>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt12-addingCartBadge.html" target="_blank"> Showing shopping cart badge and managing cart & favorites  </a> </li>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt13-manageReviews.html" target="_blank"> Managing user's local reviews  </a> </li>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt14-redirectingTheLink.html" target="_blank"> Redirecting user to the appropriate page based on the activity  </a> </li>
+    <li> <a href="http://nodejsmongodb-nodejsexperiment.rhcloud.com/Expt15-followingUsers.html" target="_blank"> Following and unfollowing users  </a> </li>
+</ol>
+
+<p>
+    <b>Registration form validation :</b> <br />
+    Validating any form before sending it to the database as invalid values might even crash the database. So I am validating the registration form for invalid and blank values for mandatory fields. The validation in this experiment
+    catches errors like choosing the username that already exists in the database, giving passwords that don't match with
+    each other, clearing the mandatory fields after giving some value and entering invalid email address. In case an error
+    occurs an error message is displayed right below the corresponding field. Directives are created to check if the username
+    already exists and the passwords match each other.
+</p>
+
+<p>
+    <b>
+        Showing shopping cart badge and managing cart & favorites :
+    </b>
+    <br />
+    Having a cart badge in the menu is required in any shopping application as it will give the user
+    information on what and how many items he has added to the cart so far. When the user adds/removes a product
+    from the cart, the badge gets updated accordingly showing the current updated count. The user cart and favorites
+    are managed through a delete link on the product list. When the user clicks on the link, the selected product is
+    removed from the current list.
+</p>
+
+<p>
+    <b>
+        Managing user's local reviews:
+    </b>
+    <br/>
+    This experiment actually is a very tricker one as it about maintaining the consistency between the product
+    reviews and user reviews. When a user adds a review to a product, the review is added both the users account and to
+    the product’s reviews list. So when a deletion of a review happens, it must be deleted from both the lists to maintain
+    consistency.
+</p>
+
+<p>
+    <b>
+        Redirecting user to the appropriate tab:
+    </b> <br/>
+    I am focusing more on user friendliness as it helps the user to use the application in a much easier way.
+    So this experiment is about redirecting the user to the appropriate page based on the result of the action he
+    executes for example. if the user adds a product to the cart, he will be redirected to the carts page in his account
+    saying that his product has been added to the cart successfully showing the currently added product.
+</p>
+
+<p>
+    <b>
+        Following and unfollowing users :
+    </b> <br/>
+    This is the most interesting and toughest experiments of all as it exhibits a two-way relationship. In this
+    experiment an user will be given an option to follow other users in the system.When a user say 'x' follows another
+    used named say 'y', 'y' will appear in 'x' list as the one he follows. In 'y' account, 'x' will appear as his
+    follower. It is a two way relationship. Similarly when unfollowing the user, the relationship should be cancelled on
+    both the sides.otherwise it will create inconsistency.
+</p>
+
+<p>
+    I have completed more than 70% of the project functionalities. Still looking for some more cool functionalities to add as
+    part of my project in the forthcoming weeks.
+</p>
+

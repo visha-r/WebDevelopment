@@ -1,0 +1,17 @@
+﻿../story/whatisnext.htm?../documentation/story.txt		What is next?
+Acknowledgement.html					Acknowledgments
+Abstract.html							Abstract
+Technologies.html						Technologies used
+ProjectFlow.html						Project flow
+DatabaseDesign.html						Database schema
+HomePage.html							Home page
+Registration.html						Registration
+Login.html								Login page
+Search.html								Search products
+SearchDetails.html						Product details
+Reviews.html							Add reviews
+UserProfile.html						Manage user profile
+FollowUsers.html						Follow/Unfollow users
+StoreLocator.html						Store locator
+References.html							References
+FutureEnhancements.html					Future enhancements

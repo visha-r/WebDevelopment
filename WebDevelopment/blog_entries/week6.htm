@@ -1,0 +1,39 @@
+﻿<h3>Week 6 - node.js</h3>
+<p>
+    This is node.js week and a very interesting one as it gave me an opportunity to play with the server.
+!!! I spent almost a day in configuring the node.js server in eclipse and linking my application to the openshift
+    server. Finally I got everything working. This week I did the following experiments on node.js :
+    <ol>
+        <li>Basic node.js experiment fetching data through $http.get </li>
+        <li>Adding user favorites through POST method</li>
+        <li>Adding and updating products through POST & PUT methods</li>
+        <li>Editing shopping cart information</li>
+        <li>Linking users and their reviews through many-to-many mapping</li>
+    </ol>
+</p>
+<p>
+    As part of the 1st experiment, I started with a simple application fetching data from the node.js server through get request. The request has to be sent by the client
+    along with any parameter if needed to get a particular product. It took some time to collaborate with the server as it reponded with 404
+    error lot of times. Finally it let me to invoke its methods.
+</p>
+<p>
+    The experiment 2 focuses on letting the user to add products to his favorite list on a single click. This
+    functionality uses POST method to send data to the server. The data is sent in the body of the request which will then be parsed by the server using using body-parser. 
+    The processed data can then be sent back to the client to update the current view.
+</p>
+<p>
+    The 3rd experiment is about adding and updating the product details using post and put request. While using put request, request parameters like new product information 
+    will be passed in the url. The parameters are then parsed by the server. Adding new product is done through post request where the product information is passed in the request body.
+</p>
+<p>
+    The 4th experiment is about editing cart information like the product count. Once the product is added to the cart, the user can then choose to edit the count. If user enters 0, it 
+    will be assumed that the user is no longer interested in buying the product and will be removed from the cart otherwise the count will be updated along with the total price. The user can 
+    also explicitly delete the product from the list by clicking the remove button. The remove functionality is done through delete request. 
+</p>
+<p>
+    The 5th and final experiment is about linking users with their reviews through many-to-many mapping. A product can have many reviews and the reviews of a product can be written by many 
+    users leading to a many-to-many relationship. To fetch the reviews returned by a particular user, every product  and every review of the given user are iterated through to get the matching reviews. 
+</p>
+<p>
+    t was altogether a fun learning week. Waiting to explore more advanced features of node.js as well as its compatibility with MongoDB!
+</p>
